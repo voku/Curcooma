@@ -31,3 +31,4 @@ $.fn.curcooma = function() {
 $(document).ready(function() {
 	$('body').curcooma();
 });
+//# sourceMappingURL=app.pkgd.js.map
