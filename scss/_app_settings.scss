@@ -8,13 +8,26 @@
 
 // Colors (take naming ideas from http://chir.ag/projects/name-that-color/)
 $color-default: rgb(30,30,30);
+$color-aubergine: rgb(73,10,61); //#490a3d
+$color-tomato: rgb(189,21,80); //#bd1550
+$color-orange: rgb(233,127,2); //#e97f02
+$color-lemon: rgb(248,202,0); //#f8ca00
+$color-salad: rgb(138,155,15); //#8a9b0f
 
 // Fonts
-$font-default: normal 1em/1.4 sans-serif;
+$font-default: sans-serif;
 @mixin font-text {
-	font: 400 1em/1.4 $font-text;
+	font: 400 1em/1.4 $font-default;
 	color: $color-default;
 }
+$font-headline: 'Luckiest Guy', cursive;
+@mixin font-headine {
+	font: 400 2.5em/1.4 $font-headline;
+	color: $color-default;
+}
+
+// Spacings
+$spacing: 20px;
 
 // Breakpoints (For em calculation use http://pxtoem.com/)
 $breakpoint-min: 0em; 				//0px

@@ -7,7 +7,18 @@
 */
 
 // Common Styles
-body { }
+body { 
+	background: rgba(200,200,200,0.1)
+}
+h1, h2, h3, h4, h5, h6 {
+	@include font-headine; 
+}
+h1 {
+	color: $color-salad;
+	margin: $spacing/2 $spacing;
+	font-size: 3em;
+	text-shadow: 2px 2px 0 #fff, 3px 3px 3px rgba(0,0,0,0.3);
+}
 
 // Media Queries (from min to max)
 @media (min-width: $breakpoint-min) { }
