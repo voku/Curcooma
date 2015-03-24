@@ -1,6 +1,6 @@
 /*
- * boilerplate by menadwork kommunikation GmbH (http://www.menadwork.com) (2015-03-23, 23:58)
+ * boilerplate by menadwork kommunikation GmbH (http://www.menadwork.com) (2015-03-24, 12:36)
  */
 
-var getGender=function(){return"male"},playerGender=getGender(),playerType=3,guestCount=12;$.fn.curcooma=function(){var a={user:{gender:playerGender,type:playerType},guestCount:guestCount};$("p").text(a.user.gender)},$(document).ready(function(){$("body").curcooma()});
+$.fn.curcooma=function(){var a=null,b=(function(){return $.ajax({async:!1,global:!1,url:"../json/game-data.json",dataType:"json",success:function(b){a=b,console.log(b)}}),a}(),function(){return a.gender}),c=b(),d=3,e=12,f={user:{gender:c,type:d},guestCount:e};$("p").text(f.user.gender)},$(document).ready(function(){$("body").curcooma()});
 //# sourceMappingURL=app.js.map

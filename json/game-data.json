@@ -1,0 +1,60 @@
+{
+		"_id": "55113b93eb77d46bb9f0ce49",
+		"index": 0,
+		"guid": "a4331e8f-f3fc-48b1-a2be-92f797f4cc39",
+		"isActive": true,
+		"balance": "$1,167.98",
+		"picture": "http://placehold.it/32x32",
+		"gender": "female",
+		"age": 23,
+		"eyeColor": "brown",
+		"name": {
+			"first": "Luella",
+			"last": "Pope"
+		},
+		"company": "SONGBIRD",
+		"email": "luella.pope@songbird.biz",
+		"phone": "+1 (879) 577-2974",
+		"address": "232 Little Street, Echo, North Dakota, 1830",
+		"about": "Consectetur qui adipisicing veniam laborum labore et quis proident ullamco veniam et culpa. Ut irure pariatur dolore sunt voluptate reprehenderit ea ullamco ex tempor elit. Aute aliquip sit sit nisi exercitation sit incididunt ad dolor in dolore.\r\n",
+		"registered": "Sunday, May 18, 2014 2:51 AM",
+		"latitude": 31.900232,
+		"longitude": -46.878639,
+		"tags": [
+			"laborum",
+			"officia",
+			"est",
+			"ex",
+			"veniam",
+			"fugiat",
+			"dolor"
+		],
+		"range": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5,
+			6,
+			7,
+			8,
+			9
+		],
+		"friends": [
+			{
+				"id": 0,
+				"name": "Robbins Roy"
+			},
+			{
+				"id": 1,
+				"name": "Sparks Patton"
+			},
+			{
+				"id": 2,
+				"name": "Lottie Dean"
+			}
+		],
+		"greeting": "Hello, Luella! You have 9 unread messages.",
+		"favoriteFruit": "banana"
+	}
