@@ -1,12 +1,16 @@
 /**
-* Player Section
+* Header
 *
-* @desc Player's info box
+* @desc header
 * @author [HZ]
-* @dependency _app_settings
+* @dependency _app_settingsscss
 */
 
-
+.header {
+	position: relative;
+	padding: $spacing;
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+}
 
 // Media Queries (from min to max)
 @media (min-width: $breakpoint-min) { }

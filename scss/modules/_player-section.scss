@@ -6,7 +6,15 @@
 * @dependency _app_settings
 */
 
-
+.player-section {
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 0.9em;
+}
+.player-name {
+	text-align: center;
+}
 
 // Media Queries (from min to max)
 @media (min-width: $breakpoint-min) { }

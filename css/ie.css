@@ -504,14 +504,13 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font: 400 2.5em/1.4 "Luckiest Guy", cursive;
   color: #1e1e1e;
+  margin: 0;
 }
 
-/* line 16, ../scss/_base.scss */
+/* line 17, ../scss/_base.scss */
 h1 {
   color: #8a9b0f;
-  margin: 10px 20px;
   font-size: 3em;
   text-shadow: 2px 2px 0 #fff, 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
-
 /*# sourceMappingURL=ie.css.map */

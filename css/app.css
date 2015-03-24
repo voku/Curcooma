@@ -504,30 +504,52 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font: 400 2.5em/1.4 "Luckiest Guy", cursive;
   color: #1e1e1e;
+  margin: 0;
 }
 
-/* line 16, ../scss/_base.scss */
+/* line 17, ../scss/_base.scss */
 h1 {
   color: #8a9b0f;
-  margin: 10px 20px;
   font-size: 3em;
   text-shadow: 2px 2px 0 #fff, 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 /**
-* Example
+* Player Section
 *
-* @desc Just an example file
-* @author [XX]
-* @dependency _app_settingsscss
+* @desc Player's info box
+* @author [HZ]
+* @dependency _app_settings
 */
+/* line 9, ../scss/modules/_player-section.scss */
+.player-section {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0.9em;
+}
+
+/* line 15, ../scss/modules/_player-section.scss */
+.player-name {
+  text-align: center;
+}
+
 /**
-* Example
+* Header
 *
-* @desc Just an example file
-* @author [XX]
+* @desc header
+* @author [HZ]
 * @dependency _app_settingsscss
 */
+/* line 9, ../scss/sections/_header.scss */
+.header {
+  position: relative;
+  padding: 20px;
+  -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+     -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
 /**
 * Example
 *

@@ -8,39 +8,43 @@
 
 $.fn.curcooma = function() {
 
-	 // consume game-data.json
-    var gameData = null,
-        getGameData = (function() {
-            $.ajax({
-                'async': false,
-                'global': false,
-                'url': '../json/game-data.json',
-                'dataType': "json",
-                'success': function(data) {
-                    gameData = data;
-                    console.log(data);
-                }
-            });
-            return gameData;
-        })(),
-        getGender = function() {
-            return gameData.gender;
-        },
-        playerGender = getGender(),
-        playerType = 03,
-        guestCount = 12;
 
-    // Overall settings
-    var settings = {
-        user: {
-            gender: playerGender,
-            type: playerType
-        },
-        guestCount: guestCount
-    };
+	  // consume game-data.json
+    var getGameData = (function() {
+          $.ajax({
+            'async': false,
+            'global': false,
+            'url': '../json/player-data.json',
+            'dataType': "json",
+            'success': function(data) {
+            	 	console.log(data);
+               	playerData = data.player;
+            }
+          });
+        })();
 
-
-    $('p').text(settings.user.gender);
+    // populate player section
+    $('.player-name').text(playerData.name);
+    switch (playerData.type) {
+		  case 1:
+		    playerPic = 'http://placehold.it/60x60/8a9b0f/ffffff&text=type+1';
+		    break;
+		  case 2:
+		    playerPic = 'http://placehold.it/60x60/8a9b0f/ffffff&text=type+2';
+		    break;
+		  case 3:
+		    playerPic = 'http://placehold.it/60x60/8a9b0f/ffffff&text=type+3';
+		    break;
+		  case 4:
+		    playerPic = 'http://placehold.it/60x60/8a9b0f/ffffff&text=type+4';
+		    break;
+		  case 5:
+		    playerPic = 'http://placehold.it/60x60/8a9b0f/ffffff&text=type+5';
+		    break;
+		  default:
+		    playerPic = 'http://placehold.it/60x60/8a9b0f/ffffff&text=type+1';
+		}
+    $('.player-pic img').attr('src', playerPic);
 
 
 };

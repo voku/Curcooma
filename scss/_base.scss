@@ -12,10 +12,10 @@ body {
 }
 h1, h2, h3, h4, h5, h6 {
 	@include font-headine; 
+	margin: 0;
 }
 h1 {
 	color: $color-salad;
-	margin: $spacing/2 $spacing;
 	font-size: 3em;
 	text-shadow: 2px 2px 0 #fff, 3px 3px 3px rgba(0,0,0,0.3);
 }
