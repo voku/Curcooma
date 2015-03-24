@@ -1,14 +1,18 @@
 /**
-* Header
+* Main Section 
 *
-* @desc header
+* @desc main
 * @author [HZ]
-* @dependency _app_settingsscss
+* @dependency _app_settings.scss
 */
 
-.header {
-	position: relative;
-	padding: $spacing/2 $spacing; 
+.main {
+	padding: $spacing;
+	color: $color-aubergine;
+}
+.restaurant-name {
+	@include font-headine;
+	color: $color-aubergine;
 }
 
 // Media Queries (from min to max)

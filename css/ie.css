@@ -497,7 +497,7 @@ th {
 */
 /* line 10, ../scss/_base.scss */
 body {
-  background: rgba(200, 200, 200, 0.1);
+  background: #eee;
 }
 
 /* line 13, ../scss/_base.scss */
@@ -513,4 +513,15 @@ h1 {
   font-size: 3em;
   text-shadow: 2px 2px 0 #fff, 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
+
+/* line 22, ../scss/_base.scss */
+figure {
+  margin: 0;
+}
+
+/* line 25, ../scss/_base.scss */
+p {
+  margin: 0;
+}
+
 /*# sourceMappingURL=ie.css.map */

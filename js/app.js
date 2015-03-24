@@ -19,12 +19,14 @@ $.fn.curcooma = function() {
             'success': function(data) {
             	 	console.log(data);
                	playerData = data.player;
+               	gameData = data;
             }
           });
         })();
 
     // populate player section
     $('.player-name').text(playerData.name);
+    $('.player-money').text(gameData.balance);
     switch (playerData.type) {
 		  case 1:
 		    playerPic = 'http://placehold.it/60x60/8a9b0f/ffffff&text=type+1';
@@ -45,6 +47,9 @@ $.fn.curcooma = function() {
 		    playerPic = 'http://placehold.it/60x60/8a9b0f/ffffff&text=type+1';
 		}
     $('.player-pic img').attr('src', playerPic);
+
+    // populate main section
+    $('.restaurant-name').text(playerData.restaurant);
 
 
 };

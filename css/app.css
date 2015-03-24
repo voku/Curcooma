@@ -497,7 +497,7 @@ th {
 */
 /* line 10, ../scss/_base.scss */
 body {
-  background: rgba(200, 200, 200, 0.1);
+  background: #eee;
 }
 
 /* line 13, ../scss/_base.scss */
@@ -514,6 +514,16 @@ h1 {
   text-shadow: 2px 2px 0 #fff, 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
+/* line 22, ../scss/_base.scss */
+figure {
+  margin: 0;
+}
+
+/* line 25, ../scss/_base.scss */
+p {
+  margin: 0;
+}
+
 /**
 * Player Section
 *
@@ -524,14 +534,42 @@ h1 {
 /* line 9, ../scss/modules/_player-section.scss */
 .player-section {
   position: absolute;
-  right: 0;
-  top: 0;
-  font-size: 0.9em;
+  right: 20px;
+  top: 10px;
+  color: #8a9b0f;
+}
+/* line 14, ../scss/modules/_player-section.scss */
+.player-section td {
+  padding: 0 10px 5px 0;
+}
+/* line 16, ../scss/modules/_player-section.scss */
+.player-section td:first-child {
+  text-align: right;
 }
 
-/* line 15, ../scss/modules/_player-section.scss */
-.player-name {
-  text-align: center;
+/* line 21, ../scss/modules/_player-section.scss */
+.player-name, .player-money {
+  font-weight: bold;
+}
+
+/* line 24, ../scss/modules/_player-section.scss */
+.player-pic {
+  float: right;
+}
+/* line 26, ../scss/modules/_player-section.scss */
+.player-pic img {
+  border: 2px solid #fff;
+  -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+     -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  float: right;
+}
+
+/* line 32, ../scss/modules/_player-section.scss */
+.player-info {
+  float: right;
+  padding-top: 25px;
+  display: block;
 }
 
 /**
@@ -544,10 +582,27 @@ h1 {
 /* line 9, ../scss/sections/_header.scss */
 .header {
   position: relative;
+  padding: 10px 20px;
+}
+
+/**
+* Main Section 
+*
+* @desc main
+* @author [HZ]
+* @dependency _app_settings.scss
+*/
+/* line 9, ../scss/sections/_main.scss */
+.main {
   padding: 20px;
-  -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
-     -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
-          box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  color: #490a3d;
+}
+
+/* line 13, ../scss/sections/_main.scss */
+.restaurant-name {
+  font: 400 2.5em/1.4 "Luckiest Guy", cursive;
+  color: #1e1e1e;
+  color: #490a3d;
 }
 
 /**
