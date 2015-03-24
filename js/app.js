@@ -8,7 +8,7 @@
 
 $.fn.curcooma = function() {
 
-    // consume game-data.json
+	 // consume game-data.json
     var gameData = null,
         getGameData = (function() {
             $.ajax({
@@ -47,5 +47,5 @@ $.fn.curcooma = function() {
 
 // init Curcooma!
 $(document).ready(function() {
-    $('body').curcooma();
+	$('body').curcooma();
 });
