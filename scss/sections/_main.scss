@@ -7,12 +7,39 @@
 */
 
 .main {
-	padding: $spacing;
+	padding: $spacing/2 $spacing;
 	color: $color-aubergine;
+	position: relative;
+}
+.restaurant-info {
+	background: $color-aubergine;
+	color: #fff;
+	padding: $spacing/2 $spacing $spacing/4 $spacing;
+	border: 2px solid #fff;
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+	display: inline-block;
 }
 .restaurant-name {
 	@include font-headine;
-	color: $color-aubergine;
+	color: #fff;
+	font-size: 1.8em;
+}
+.sidebar {
+	width: 200px;
+	float: left;
+	padding-top: $spacing;
+}
+.navigation {
+	ul {
+		list-style: none;
+	}
+	a {
+		text-decoration: none;
+		color: $color-aubergine;
+	}
+}
+.content {
+	float: right;
 }
 
 // Media Queries (from min to max)

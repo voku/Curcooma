@@ -524,6 +524,12 @@ p {
   margin: 0;
 }
 
+/* line 28, ../scss/_base.scss */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 /**
 * Player Section
 *
@@ -594,15 +600,51 @@ p {
 */
 /* line 9, ../scss/sections/_main.scss */
 .main {
-  padding: 20px;
+  padding: 10px 20px;
   color: #490a3d;
+  position: relative;
 }
 
-/* line 13, ../scss/sections/_main.scss */
+/* line 14, ../scss/sections/_main.scss */
+.restaurant-info {
+  background: #490a3d;
+  color: #fff;
+  padding: 10px 20px 5px 20px;
+  border: 2px solid #fff;
+  -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+     -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+}
+
+/* line 22, ../scss/sections/_main.scss */
 .restaurant-name {
   font: 400 2.5em/1.4 "Luckiest Guy", cursive;
   color: #1e1e1e;
+  color: #fff;
+  font-size: 1.8em;
+}
+
+/* line 27, ../scss/sections/_main.scss */
+.sidebar {
+  width: 200px;
+  float: left;
+  padding-top: 20px;
+}
+
+/* line 33, ../scss/sections/_main.scss */
+.navigation ul {
+  list-style: none;
+}
+/* line 36, ../scss/sections/_main.scss */
+.navigation a {
+  text-decoration: none;
   color: #490a3d;
+}
+
+/* line 41, ../scss/sections/_main.scss */
+.content {
+  float: right;
 }
 
 /**

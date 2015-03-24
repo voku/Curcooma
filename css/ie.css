@@ -524,4 +524,9 @@ p {
   margin: 0;
 }
 
+/* line 28, ../scss/_base.scss */
+ul {
+  margin: 0;
+  padding: 0;
+}
 /*# sourceMappingURL=ie.css.map */

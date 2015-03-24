@@ -25,6 +25,10 @@ figure {
 p {
 	margin: 0;
 }
+ul {
+	margin: 0;
+	padding: 0;
+}
 
 // Media Queries (from min to max)
 @media (min-width: $breakpoint-min) { }
