@@ -6,11 +6,12 @@
 * @dependency _app_settingsscss
 */
 
-.header {
+.footer {
 	position: relative;
-	padding: $spacing/2 $spacing; 
-	background: $color-04;
+	padding: $spacing; 
+	background: $color-03;
 	color: #fff;
+	border-bottom: $spacing/2 solid $color-05;
 }
 
 // Media Queries (from min to max)

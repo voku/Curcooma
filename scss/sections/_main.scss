@@ -7,21 +7,22 @@
 */
 
 .main {
-	padding: $spacing/2 $spacing;
-	color: $color-aubergine;
+	padding: 0 $spacing $spacing/2 $spacing;
+	color: $color-04;
 	position: relative;
 }
 .restaurant-info {
-	background: $color-aubergine;
-	color: #fff;
-	padding: $spacing/2 $spacing $spacing/4 $spacing;
-	border: 2px solid #fff;
-	box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
-	display: inline-block;
+	color: $color-04;
+	padding: $spacing/2 0 $spacing/4 $spacing;
+	margin: -$spacing;
+	margin-top: 0;
+	margin-bottom: 0;
+	background: $color-02;
+	font-size: 0.8em;
 }
 .restaurant-name {
 	@include font-headine;
-	color: #fff;
+	color: inherit;
 	font-size: 1.8em;
 }
 .sidebar {
@@ -35,7 +36,7 @@
 	}
 	a {
 		text-decoration: none;
-		color: $color-aubergine;
+		color: $color-04;
 	}
 }
 .content {
