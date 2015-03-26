@@ -7,11 +7,15 @@
 */
 
 .footer {
-	position: relative;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
 	padding: $spacing; 
 	background: $color-03;
 	color: #fff;
-	border-bottom: $spacing/2 solid $color-05;
+	border-bottom: $spacing/2 solid $color-04;
+	box-sizing: border-box;
 }
 
 // Media Queries (from min to max)

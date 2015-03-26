@@ -8,9 +8,48 @@
 
 .header {
 	position: relative;
-	padding: $spacing/2 $spacing; 
+	padding: $spacing/2 $spacing 0 $spacing/2;; 
 	background: $color-04;
 	color: #fff;
+	h1 {
+		padding-bottom: $spacing/2;
+	}
+}
+.restaurant-info {
+	color: $color-04;
+	padding: $spacing/2 0 $spacing/4 $spacing;
+	margin: -$spacing;
+	margin-top: 0;
+	margin-bottom: 0;
+	background: $color-02;
+	font-size: 0.8em;
+	border-bottom: 4px solid $color-04;
+	box-shadow: 3px 3px 4px rgba(0,0,0,0.3);
+}
+.restaurant-info-box {
+	float: left;
+	padding: 0 $spacing;
+	border-left: 2px solid $color-04;
+	&:first-child {
+		border: none;
+		padding-left: 0;
+	}
+}
+.restaurant-info-hl {
+	@include font-headine;
+	font-size: 1.8em;
+	color: $color-04;
+}
+.local-time {
+	float: right;
+	text-align: right;
+	padding-right: $spacing;
+	font-size: 1.3em;
+	font-weight: bold;
+	line-height: 1.3;
+	padding-left: $spacing;
+	margin-left: $spacing;
+	border-left: 2px solid $color-04;
 }
 
 // Media Queries (from min to max)
