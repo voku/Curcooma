@@ -529,6 +529,19 @@ ul {
   padding: 0;
 }
 
+/* line 31, ../scss/_base.scss */
+.icon {
+  fill: currentColor;
+}
+
+/* line 34, ../scss/_base.scss */
+button {
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
 /**
 * Player Section
 *
@@ -553,24 +566,39 @@ ul {
 }
 
 /* line 21, ../scss/modules/_player-section.scss */
+.meta-navi {
+  float: right;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  border-right: 2px solid #fff;
+  margin-right: 20px;
+}
+/* line 28, ../scss/modules/_player-section.scss */
+.meta-navi svg {
+  width: 30px;
+  height: 30px;
+}
+
+/* line 33, ../scss/modules/_player-section.scss */
 .player-name, .player-money {
   font-weight: bold;
 }
 
-/* line 24, ../scss/modules/_player-section.scss */
+/* line 36, ../scss/modules/_player-section.scss */
 .player-pic {
   float: right;
 }
-/* line 26, ../scss/modules/_player-section.scss */
+/* line 38, ../scss/modules/_player-section.scss */
 .player-pic img {
   float: right;
   border: 1px solid #fff;
 }
 
-/* line 31, ../scss/modules/_player-section.scss */
+/* line 43, ../scss/modules/_player-section.scss */
 .player-info {
   float: right;
-  padding-top: 14px;
+  padding-top: 7px;
   display: block;
 }
 
@@ -612,21 +640,25 @@ ul {
   margin-bottom: 0;
   background: #c3ff68;
   font-size: 0.8em;
+  border-bottom: 4px solid #4e9689;
+  -webkit-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+     -moz-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* line 23, ../scss/sections/_main.scss */
+/* line 25, ../scss/sections/_main.scss */
 .restaurant-info-box {
   float: left;
   padding: 0 20px;
-  border-left: 1px solid #4e9689;
+  border-left: 2px solid #4e9689;
 }
-/* line 27, ../scss/sections/_main.scss */
+/* line 29, ../scss/sections/_main.scss */
 .restaurant-info-box:first-child {
   border: none;
   padding-left: 0;
 }
 
-/* line 32, ../scss/sections/_main.scss */
+/* line 34, ../scss/sections/_main.scss */
 .restaurant-info-hl {
   font: 400 2.5em/1.4 "Luckiest Guy", cursive;
   color: #1e1e1e;
@@ -634,24 +666,24 @@ ul {
   color: #4e9689;
 }
 
-/* line 37, ../scss/sections/_main.scss */
+/* line 39, ../scss/sections/_main.scss */
 .sidebar {
   width: 200px;
   float: left;
   padding-top: 20px;
 }
 
-/* line 43, ../scss/sections/_main.scss */
+/* line 45, ../scss/sections/_main.scss */
 .navigation ul {
   list-style: none;
 }
-/* line 46, ../scss/sections/_main.scss */
+/* line 48, ../scss/sections/_main.scss */
 .navigation a {
   text-decoration: none;
   color: #4e9689;
 }
 
-/* line 51, ../scss/sections/_main.scss */
+/* line 53, ../scss/sections/_main.scss */
 .content {
   float: right;
 }
@@ -679,4 +711,5 @@ ul {
 * @author [XX]
 * @dependency _app_settingsscss
 */
+
 /*# sourceMappingURL=app.css.map */

@@ -18,6 +18,18 @@
 		}
 	}
 }
+.meta-navi {
+	float: right;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  border-right: 2px solid #fff;
+  margin-right: 20px;
+  svg {
+  	width: 30px;
+  	height: 30px;
+  }
+}
 .player-name, .player-money {
 	font-weight: bold;
 }
@@ -30,7 +42,7 @@
 }
 .player-info {
 	float: right;
-	padding-top: 14px;
+	padding-top: 7px;
   display: block;
 }
 
