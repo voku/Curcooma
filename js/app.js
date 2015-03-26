@@ -19,6 +19,7 @@ $.fn.curcooma = function() {
             'success': function(data) {
             	 	console.log(data);
                	playerData = data.player;
+               	restaurantData = data.restaurant;
                	gameData = data;
             }
           });
@@ -29,27 +30,31 @@ $.fn.curcooma = function() {
     $('.player-money').text(gameData.balance);
     switch (playerData.type) {
 		  case 1:
-		    playerPic = 'http://placehold.it/60x60/8a9b0f/ffffff&text=type+1';
+		    playerPic = 'http://placehold.it/50/4e9689/ffffff&text=1';
 		    break;
 		  case 2:
-		    playerPic = 'http://placehold.it/60x60/8a9b0f/ffffff&text=type+2';
+		    playerPic = 'http://placehold.it/50/4e9689/ffffff&text=2';
 		    break;
 		  case 3:
-		    playerPic = 'http://placehold.it/60x60/8a9b0f/ffffff&text=type+3';
+		    playerPic = 'http://placehold.it/50/4e9689/ffffff&text=3';
 		    break;
 		  case 4:
-		    playerPic = 'http://placehold.it/60x60/8a9b0f/ffffff&text=type+4';
+		    playerPic = 'http://placehold.it/50/4e9689/ffffff&text=4';
 		    break;
 		  case 5:
-		    playerPic = 'http://placehold.it/60x60/8a9b0f/ffffff&text=type+5';
+		    playerPic = 'http://placehold.it/50/4e9689/ffffff&text=5';
 		    break;
 		  default:
-		    playerPic = 'http://placehold.it/60x60/8a9b0f/ffffff&text=type+1';
+		    playerPic = 'http://placehold.it/50/4e9689/ffffff&text=1';
 		}
     $('.player-pic img').attr('src', playerPic);
 
+    // populate restaurant info
+    $('.restaurant-name').text(restaurantData.name);
+    $('.restaurant-seats').text(restaurantData.seats);
+
     // populate main section
-    $('.restaurant-name').text(playerData.restaurant);
+    
 
 
 };

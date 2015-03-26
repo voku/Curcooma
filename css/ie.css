@@ -497,7 +497,7 @@ th {
 */
 /* line 10, ../scss/_base.scss */
 body {
-  background: #eee;
+  background: #f4fce8;
 }
 
 /* line 13, ../scss/_base.scss */
@@ -505,26 +505,25 @@ h1, h2, h3, h4, h5, h6 {
   font: 400 2.5em/1.4 "Luckiest Guy", cursive;
   color: #1e1e1e;
   margin: 0;
+  color: inherit;
 }
 
-/* line 17, ../scss/_base.scss */
+/* line 18, ../scss/_base.scss */
 h1 {
-  color: #8a9b0f;
-  font-size: 3em;
-  text-shadow: 2px 2px 0 #fff, 3px 3px 3px rgba(0, 0, 0, 0.3);
+  font-size: 2.6em;
 }
 
-/* line 22, ../scss/_base.scss */
+/* line 21, ../scss/_base.scss */
 figure {
   margin: 0;
 }
 
-/* line 25, ../scss/_base.scss */
+/* line 24, ../scss/_base.scss */
 p {
   margin: 0;
 }
 
-/* line 28, ../scss/_base.scss */
+/* line 27, ../scss/_base.scss */
 ul {
   margin: 0;
   padding: 0;
