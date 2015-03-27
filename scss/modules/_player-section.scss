@@ -20,7 +20,6 @@
 }
 .meta-navi {
 	float: right;
-  padding-top: 15px;
   padding-bottom: $spacing/2;
   padding-right: $spacing;
   border-right: 2px solid #fff;
@@ -29,6 +28,10 @@
   	width: 30px;
   	height: 30px;
   }
+}
+.button-settings {
+	position: relative;
+  top: 7px;
 }
 .player-name, .player-money {
 	font-weight: bold;
@@ -42,7 +45,6 @@
 }
 .player-info {
 	float: right;
-	padding-top: 7px;
   display: block;
 }
 

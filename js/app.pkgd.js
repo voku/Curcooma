@@ -9,52 +9,52 @@
 $.fn.curcooma = function() {
 
 
-	  // consume game-data.json
-    var getGameData = (function() {
-          $.ajax({
-            'async': false,
-            'global': false,
-            'url': '../json/player-data.json',
-            'dataType': "json",
-            'success': function(data) {
-            	 	console.log(data);
-               	playerData = data.player;
-               	restaurantData = data.restaurant;
-               	gameData = data;
-            }
-          });
-        })();
+		// consume game-data.json
+		var getGameData = (function() {
+					$.ajax({
+						'async': false,
+						'global': false,
+						'url': '../json/player-data.json',
+						'dataType': "json",
+						'success': function(data) {
+								console.log(data);
+								playerData = data.player;
+								restaurantData = data.restaurant;
+								gameData = data;
+						}
+					});
+				})();
 
-    // populate player section
-    $('.player-name').text(playerData.name);
-    $('.player-money').text(gameData.balance);
-    switch (playerData.type) {
-		  case 1:
-		    playerPic = 'http://placehold.it/50/4e9689/ffffff&text=1';
-		    break;
-		  case 2:
-		    playerPic = 'http://placehold.it/50/4e9689/ffffff&text=2';
-		    break;
-		  case 3:
-		    playerPic = 'http://placehold.it/50/4e9689/ffffff&text=3';
-		    break;
-		  case 4:
-		    playerPic = 'http://placehold.it/50/4e9689/ffffff&text=4';
-		    break;
-		  case 5:
-		    playerPic = 'http://placehold.it/50/4e9689/ffffff&text=5';
-		    break;
-		  default:
-		    playerPic = 'http://placehold.it/50/4e9689/ffffff&text=1';
+		// populate player section
+		$('.player-name').text(playerData.name);
+		$('.player-money').text(gameData.balance);
+		switch (playerData.type) {
+			case 1:
+				playerPic = 'http://placehold.it/40/4e9689/ffffff&text=1';
+				break;
+			case 2:
+				playerPic = 'http://placehold.it/40/4e9689/ffffff&text=2';
+				break;
+			case 3:
+				playerPic = 'http://placehold.it/40/4e9689/ffffff&text=3';
+				break;
+			case 4:
+				playerPic = 'http://placehold.it/40/4e9689/ffffff&text=4';
+				break;
+			case 5:
+				playerPic = 'http://placehold.it/40/4e9689/ffffff&text=5';
+				break;
+			default:
+				playerPic = 'http://placehold.it/40/4e9689/ffffff&text=1';
 		}
-    $('.player-pic img').attr('src', playerPic);
+		$('.player-pic img').attr('src', playerPic);
 
-    // populate restaurant info
-    $('.restaurant-name').text(restaurantData.name);
-    $('.restaurant-seats').text(restaurantData.seats);
+		// populate restaurant info
+		$('.restaurant-name').text(restaurantData.name);
+		$('.restaurant-seats').text(restaurantData.seats);
 
-    // populate main section
-    
+		// populate main section
+
 
 
 };

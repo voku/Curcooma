@@ -568,37 +568,41 @@ button {
 /* line 21, ../scss/modules/_player-section.scss */
 .meta-navi {
   float: right;
-  padding-top: 15px;
   padding-bottom: 10px;
   padding-right: 20px;
   border-right: 2px solid #fff;
   margin-right: 20px;
 }
-/* line 28, ../scss/modules/_player-section.scss */
+/* line 27, ../scss/modules/_player-section.scss */
 .meta-navi svg {
   width: 30px;
   height: 30px;
 }
 
-/* line 33, ../scss/modules/_player-section.scss */
+/* line 32, ../scss/modules/_player-section.scss */
+.button-settings {
+  position: relative;
+  top: 7px;
+}
+
+/* line 36, ../scss/modules/_player-section.scss */
 .player-name, .player-money {
   font-weight: bold;
 }
 
-/* line 36, ../scss/modules/_player-section.scss */
+/* line 39, ../scss/modules/_player-section.scss */
 .player-pic {
   float: right;
 }
-/* line 38, ../scss/modules/_player-section.scss */
+/* line 41, ../scss/modules/_player-section.scss */
 .player-pic img {
   float: right;
   border: 1px solid #fff;
 }
 
-/* line 43, ../scss/modules/_player-section.scss */
+/* line 46, ../scss/modules/_player-section.scss */
 .player-info {
   float: right;
-  padding-top: 7px;
   display: block;
 }
 
@@ -614,41 +618,54 @@ button {
   position: relative;
   padding: 10px 20px 0 10px;
   background: #4e9689;
+  background: #55a395;
+  background: -webkit-linear-gradient(top, #55a395 0%, #4e9689 70%, #47897d 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#55a395), color-stop(70%, #4e9689), to(#47897d));
+  background: -moz-linear-gradient(top, #55a395 0%, #4e9689 70%, #47897d 100%);
+  background: -o-linear-gradient(top, #55a395 0%, #4e9689 70%, #47897d 100%);
+  background: linear-gradient(to bottom, #55a395 0%, #4e9689 70%, #47897d 100%);
   color: #fff;
+  z-index: 1;
 }
-/* line 14, ../scss/sections/_header.scss */
+/* line 16, ../scss/sections/_header.scss */
 .header h1 {
   padding-bottom: 10px;
+  font-size: 2em;
 }
 
-/* line 18, ../scss/sections/_header.scss */
+/* line 21, ../scss/sections/_header.scss */
 .restaurant-info {
   color: #4e9689;
   padding: 10px 0 5px 20px;
   margin: -20px;
   margin-top: 0;
   margin-bottom: 0;
-  background: #c3ff68;
+  background: #c7ff72;
+  background: -webkit-linear-gradient(top, #c7ff72 0%, #c3ff68 70%, #c1ff63 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#c7ff72), color-stop(70%, #c3ff68), to(#c1ff63));
+  background: -moz-linear-gradient(top, #c7ff72 0%, #c3ff68 70%, #c1ff63 100%);
+  background: -o-linear-gradient(top, #c7ff72 0%, #c3ff68 70%, #c1ff63 100%);
+  background: linear-gradient(to bottom, #c7ff72 0%, #c3ff68 70%, #c1ff63 100%);
   font-size: 0.8em;
   border-bottom: 4px solid #4e9689;
-  -webkit-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
-     -moz-box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
-          box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+     -moz-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* line 29, ../scss/sections/_header.scss */
+/* line 32, ../scss/sections/_header.scss */
 .restaurant-info-box {
   float: left;
   padding: 0 20px;
   border-left: 2px solid #4e9689;
 }
-/* line 33, ../scss/sections/_header.scss */
+/* line 36, ../scss/sections/_header.scss */
 .restaurant-info-box:first-child {
   border: none;
   padding-left: 0;
 }
 
-/* line 38, ../scss/sections/_header.scss */
+/* line 41, ../scss/sections/_header.scss */
 .restaurant-info-hl {
   font: 400 2.5em/1.4 "Luckiest Guy", cursive;
   color: #1e1e1e;
@@ -656,7 +673,7 @@ button {
   color: #4e9689;
 }
 
-/* line 43, ../scss/sections/_header.scss */
+/* line 46, ../scss/sections/_header.scss */
 .local-time {
   float: right;
   text-align: right;
@@ -670,7 +687,7 @@ button {
 }
 
 /**
-* Main Section 
+* Main Section
 *
 * @desc main
 * @author [HZ]
@@ -689,26 +706,33 @@ button {
      -moz-box-sizing: border-box;
           box-sizing: border-box;
   padding-top: 145px;
+  background: #fff;
+  background: -webkit-linear-gradient(top, #fff 0%, #f4fce8 30%, #f0fbdf 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(30%, #f4fce8), to(#f0fbdf));
+  background: -moz-linear-gradient(top, #fff 0%, #f4fce8 30%, #f0fbdf 100%);
+  background: -o-linear-gradient(top, #fff 0%, #f4fce8 30%, #f0fbdf 100%);
+  background: linear-gradient(to bottom, #fff 0%, #f4fce8 30%, #f0fbdf 100%);
+  z-index: 0;
 }
 
-/* line 20, ../scss/sections/_main.scss */
+/* line 22, ../scss/sections/_main.scss */
 .sidebar {
   width: 200px;
   float: left;
   padding-top: 20px;
 }
 
-/* line 26, ../scss/sections/_main.scss */
+/* line 28, ../scss/sections/_main.scss */
 .navigation ul {
   list-style: none;
 }
-/* line 29, ../scss/sections/_main.scss */
+/* line 31, ../scss/sections/_main.scss */
 .navigation a {
   text-decoration: none;
   color: #4e9689;
 }
 
-/* line 34, ../scss/sections/_main.scss */
+/* line 36, ../scss/sections/_main.scss */
 .content {
   float: right;
 }

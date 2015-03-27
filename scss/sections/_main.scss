@@ -1,5 +1,5 @@
 /**
-* Main Section 
+* Main Section
 *
 * @desc main
 * @author [HZ]
@@ -16,6 +16,8 @@
   left: 0;
   box-sizing: border-box;
   padding-top: 145px;
+	@include linear-gradient(to bottom, #fff 0%, $color-01 30%, hsla(84, 76.9%, 92.9%, 1) 100%);
+	z-index: 0;
 }
 .sidebar {
 	width: 200px;
