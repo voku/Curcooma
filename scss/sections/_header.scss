@@ -16,6 +16,7 @@
 	h1 {
 		padding-bottom: $spacing/2;
 		font-size: 2em;
+		font-weight: normal;
 	}
 }
 .restaurant-info {
@@ -32,7 +33,6 @@
 .restaurant-info-box {
 	float: left;
 	padding: 0 $spacing;
-	border-left: 2px solid $color-04;
 	&:first-child {
 		border: none;
 		padding-left: 0;
@@ -42,6 +42,13 @@
 	@include font-headine;
 	font-size: 1.8em;
 	color: $color-04;
+	font-weight: normal;
+	svg {
+		width: 25px;
+		height: 25px;
+		position: relative;
+		bottom: -5px;
+	}
 }
 .local-time {
 	float: right;
@@ -51,8 +58,21 @@
 	font-weight: bold;
 	line-height: 1.3;
 	padding-left: $spacing;
-	margin-left: $spacing;
-	border-left: 2px solid $color-04;
+}
+.fork-spoon-divider {
+	width: 20px;
+	overflow: hidden;
+	svg {
+		fill: $color-04;
+		height: 40px;
+		width: 40px;
+		position: relative;
+	}
+	&.fork {
+		svg {
+			right: 18px;
+		}
+	}
 }
 
 // Media Queries (from min to max)

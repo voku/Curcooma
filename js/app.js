@@ -27,7 +27,7 @@ $.fn.curcooma = function() {
 
 		// populate player section
 		$('.player-name').text(playerData.name);
-		$('.player-money').text(gameData.balance);
+		$('.player-level').text(playerData.level);
 		switch (playerData.type) {
 			case 1:
 				playerPic = 'http://placehold.it/40/4e9689/ffffff&text=1';
@@ -51,6 +51,7 @@ $.fn.curcooma = function() {
 
 		// populate restaurant info
 		$('.restaurant-name').text(restaurantData.name);
+		$('.restaurant-money').text(gameData.balance);
 		$('.restaurant-seats').text(restaurantData.seats);
 
 		// populate main section

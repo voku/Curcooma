@@ -22,8 +22,6 @@
 	float: right;
   padding-bottom: $spacing/2;
   padding-right: $spacing;
-  border-right: 2px solid #fff;
-  margin-right: $spacing;
   svg {
   	width: 30px;
   	height: 30px;
@@ -33,7 +31,7 @@
 	position: relative;
   top: 7px;
 }
-.player-name, .player-money {
+.player-name, .player-level {
 	font-weight: bold;
 }
 .player-pic {
@@ -47,6 +45,7 @@
 	float: right;
   display: block;
 }
+
 
 
 

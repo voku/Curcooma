@@ -21,16 +21,25 @@
 }
 .sidebar {
 	width: 200px;
-	float: left;
-	padding-top: $spacing;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: $spacing;
+	color: #fff;
 }
 .navigation {
+	position: relative;
+	top: 110px;
+	left: 0;	
+	background: $color-04;	
 	ul {
 		list-style: none;
 	}
 	a {
 		text-decoration: none;
-		color: $color-04;
+		color: #fff;
+		display: block;
+		padding: $spacing;
 	}
 }
 .content {
