@@ -32,6 +32,9 @@
 	top: 110px;
 	left: 0;	
 	background: $color-04;	
+	padding: $spacing 0;
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+	@include linear-gradient(to bottom, hsla(169, 31.6%, 40.7%, 1) 0%, $color-04 70%, hsla(169, 31.6%, 46.7%, 1) 100%);
 	ul {
 		list-style: none;
 	}

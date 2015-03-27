@@ -662,8 +662,12 @@ button {
   border: none;
   padding-left: 0;
 }
+/* line 40, ../scss/sections/_header.scss */
+.restaurant-info-box strong {
+  font-size: 1.8em;
+}
 
-/* line 41, ../scss/sections/_header.scss */
+/* line 44, ../scss/sections/_header.scss */
 .restaurant-info-hl {
   font: 400 2.5em/1.4 "Luckiest Guy", cursive;
   color: #1e1e1e;
@@ -671,7 +675,7 @@ button {
   color: #4e9689;
   font-weight: normal;
 }
-/* line 46, ../scss/sections/_header.scss */
+/* line 49, ../scss/sections/_header.scss */
 .restaurant-info-hl svg {
   width: 25px;
   height: 25px;
@@ -679,7 +683,7 @@ button {
   bottom: -5px;
 }
 
-/* line 53, ../scss/sections/_header.scss */
+/* line 56, ../scss/sections/_header.scss */
 .local-time {
   float: right;
   text-align: right;
@@ -690,19 +694,19 @@ button {
   padding-left: 20px;
 }
 
-/* line 62, ../scss/sections/_header.scss */
+/* line 65, ../scss/sections/_header.scss */
 .fork-spoon-divider {
   width: 20px;
   overflow: hidden;
 }
-/* line 65, ../scss/sections/_header.scss */
+/* line 68, ../scss/sections/_header.scss */
 .fork-spoon-divider svg {
   fill: #4e9689;
   height: 40px;
   width: 40px;
   position: relative;
 }
-/* line 72, ../scss/sections/_header.scss */
+/* line 75, ../scss/sections/_header.scss */
 .fork-spoon-divider.fork svg {
   right: 18px;
 }
@@ -752,12 +756,22 @@ button {
   top: 110px;
   left: 0;
   background: #4e9689;
+  padding: 20px 0;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+     -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  background: #47897d;
+  background: -webkit-linear-gradient(top, #47897d 0%, #4e9689 70%, #519d8f 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#47897d), color-stop(70%, #4e9689), to(#519d8f));
+  background: -moz-linear-gradient(top, #47897d 0%, #4e9689 70%, #519d8f 100%);
+  background: -o-linear-gradient(top, #47897d 0%, #4e9689 70%, #519d8f 100%);
+  background: linear-gradient(to bottom, #47897d 0%, #4e9689 70%, #519d8f 100%);
 }
-/* line 35, ../scss/sections/_main.scss */
+/* line 38, ../scss/sections/_main.scss */
 .navigation ul {
   list-style: none;
 }
-/* line 38, ../scss/sections/_main.scss */
+/* line 41, ../scss/sections/_main.scss */
 .navigation a {
   text-decoration: none;
   color: #fff;
@@ -765,7 +779,7 @@ button {
   padding: 20px;
 }
 
-/* line 45, ../scss/sections/_main.scss */
+/* line 48, ../scss/sections/_main.scss */
 .content {
   float: right;
 }
