@@ -501,7 +501,7 @@ body {
 }
 
 /* line 13, ../scss/_base.scss */
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
   font: 400 2.5em/1.4 "Luckiest Guy", cursive;
   color: #1e1e1e;
   margin: 0;
@@ -521,20 +521,21 @@ figure {
 /* line 24, ../scss/_base.scss */
 p {
   margin: 0;
+  line-height: 1.4;
 }
 
-/* line 27, ../scss/_base.scss */
+/* line 28, ../scss/_base.scss */
 ul {
   margin: 0;
   padding: 0;
 }
 
-/* line 31, ../scss/_base.scss */
+/* line 32, ../scss/_base.scss */
 .icon {
   fill: currentColor;
 }
 
-/* line 34, ../scss/_base.scss */
+/* line 35, ../scss/_base.scss */
 button {
   background: none;
   border: 0;
@@ -594,11 +595,16 @@ button {
 }
 /* line 39, ../scss/modules/_player-section.scss */
 .player-pic img {
-  float: right;
-  border: 1px solid #fff;
+  position: relative;
+  top: -5px;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
+  border: 4px solid #4e9689;
+  /*box-shadow: 3px 3px 4px rgba(0,0,0,0.2);*/
 }
 
-/* line 44, ../scss/modules/_player-section.scss */
+/* line 47, ../scss/modules/_player-section.scss */
 .player-info {
   float: right;
   display: block;
@@ -684,29 +690,18 @@ button {
 }
 
 /* line 56, ../scss/sections/_header.scss */
-.local-time {
-  float: right;
-  text-align: right;
-  padding-right: 20px;
-  font-size: 1.3em;
-  font-weight: bold;
-  line-height: 1.3;
-  padding-left: 20px;
-}
-
-/* line 65, ../scss/sections/_header.scss */
 .fork-spoon-divider {
   width: 20px;
   overflow: hidden;
 }
-/* line 68, ../scss/sections/_header.scss */
+/* line 59, ../scss/sections/_header.scss */
 .fork-spoon-divider svg {
   fill: #4e9689;
   height: 40px;
   width: 40px;
   position: relative;
 }
-/* line 75, ../scss/sections/_header.scss */
+/* line 66, ../scss/sections/_header.scss */
 .fork-spoon-divider.fork svg {
   right: 18px;
 }
@@ -742,15 +737,20 @@ button {
 
 /* line 22, ../scss/sections/_main.scss */
 .sidebar {
-  width: 200px;
+  width: 270px;
   height: 100%;
   position: fixed;
   left: 0;
   top: 20px;
   color: #fff;
 }
+/* line 29, ../scss/sections/_main.scss */
+.sidebar h3 {
+  font-size: 1.1em;
+  padding: 0 20px;
+}
 
-/* line 30, ../scss/sections/_main.scss */
+/* line 34, ../scss/sections/_main.scss */
 .navigation {
   position: relative;
   top: 110px;
@@ -760,26 +760,42 @@ button {
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
      -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
           box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-  background: #47897d;
-  background: -webkit-linear-gradient(top, #47897d 0%, #4e9689 70%, #519d8f 100%);
-  background: -webkit-gradient(linear, left top, left bottom, from(#47897d), color-stop(70%, #4e9689), to(#519d8f));
-  background: -moz-linear-gradient(top, #47897d 0%, #4e9689 70%, #519d8f 100%);
-  background: -o-linear-gradient(top, #47897d 0%, #4e9689 70%, #519d8f 100%);
-  background: linear-gradient(to bottom, #47897d 0%, #4e9689 70%, #519d8f 100%);
+  background: #519d8f;
+  background: -webkit-linear-gradient(top, #519d8f 0%, #4e9689 70%, #4a8f83 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#519d8f), color-stop(70%, #4e9689), to(#4a8f83));
+  background: -moz-linear-gradient(top, #519d8f 0%, #4e9689 70%, #4a8f83 100%);
+  background: -o-linear-gradient(top, #519d8f 0%, #4e9689 70%, #4a8f83 100%);
+  background: linear-gradient(to bottom, #519d8f 0%, #4e9689 70%, #4a8f83 100%);
 }
-/* line 38, ../scss/sections/_main.scss */
+/* line 42, ../scss/sections/_main.scss */
 .navigation ul {
   list-style: none;
 }
-/* line 41, ../scss/sections/_main.scss */
+/* line 45, ../scss/sections/_main.scss */
 .navigation a {
   text-decoration: none;
-  color: #fff;
+  color: #4e9689;
   display: block;
   padding: 20px;
+  background: #c3ff68;
+  border: 2px solid #4e9689;
+  margin: 0 2px;
+  font-weight: bold;
 }
 
-/* line 48, ../scss/sections/_main.scss */
+/* line 56, ../scss/sections/_main.scss */
+.local-time-container {
+  padding-right: 20px;
+  padding-left: 20px;
+  font-size: 0.9em;
+}
+/* line 60, ../scss/sections/_main.scss */
+.local-time-container strong {
+  font-size: 1.1em;
+  color: #c3ff68;
+}
+
+/* line 65, ../scss/sections/_main.scss */
 .content {
   float: right;
 }
