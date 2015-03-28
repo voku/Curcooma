@@ -781,21 +781,63 @@ button {
   border: 2px solid #4e9689;
   margin: 0 2px;
   font-weight: bold;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: color 0.2s;
+     -moz-transition: color 0.2s;
+       -o-transition: color 0.2s;
+          transition: color 0.2s;
+}
+/* line 57, ../scss/sections/_main.scss */
+.navigation a span {
+  position: relative;
+  z-index: 1;
+}
+/* line 61, ../scss/sections/_main.scss */
+.navigation a:before {
+  position: absolute;
+  top: 0;
+  left: -500px;
+  width: 400px;
+  height: 100px;
+  padding: 20px;
+  background: #4e9689;
+  -webkit-transition: left 0.2s;
+     -moz-transition: left 0.2s;
+       -o-transition: left 0.2s;
+          transition: left 0.2s;
+  content: '';
+}
+/* line 72, ../scss/sections/_main.scss */
+.navigation a:hover {
+  color: #c3ff68;
+  -webkit-transition: color 0.3s;
+     -moz-transition: color 0.3s;
+       -o-transition: color 0.3s;
+          transition: color 0.3s;
+}
+/* line 75, ../scss/sections/_main.scss */
+.navigation a:hover:before {
+  left: 0;
+  -webkit-transition: left 0.3s;
+     -moz-transition: left 0.3s;
+       -o-transition: left 0.3s;
+          transition: left 0.3s;
 }
 
-/* line 56, ../scss/sections/_main.scss */
+/* line 82, ../scss/sections/_main.scss */
 .local-time-container {
   padding-right: 20px;
   padding-left: 20px;
   font-size: 0.9em;
 }
-/* line 60, ../scss/sections/_main.scss */
+/* line 86, ../scss/sections/_main.scss */
 .local-time-container strong {
   font-size: 1.1em;
   color: #c3ff68;
 }
 
-/* line 65, ../scss/sections/_main.scss */
+/* line 91, ../scss/sections/_main.scss */
 .content {
   float: right;
 }

@@ -30,22 +30,22 @@ $.fn.curcooma = function() {
 		$('.player-level').text(playerData.level);
 		switch (playerData.type) {
 			case 1:
-				playerPic = 'http://placehold.it/40/4e9689/ffffff&text=1';
+				playerPic = 'https://polymer-tut.appspot.com/images/avatar-01.svg';
 				break;
 			case 2:
-				playerPic = 'http://placehold.it/40/4e9689/ffffff&text=2';
+				playerPic = 'https://polymer-tut.appspot.com/images/avatar-07.svg';
 				break;
 			case 3:
-				playerPic = 'http://placehold.it/40/4e9689/ffffff&text=3';
+				playerPic = 'https://polymer-tut.appspot.com/images/avatar-03.svg';
 				break;
 			case 4:
-				playerPic = 'http://placehold.it/40/4e9689/ffffff&text=4';
+				playerPic = 'https://polymer-tut.appspot.com/images/avatar-06.svg';
 				break;
 			case 5:
-				playerPic = 'http://placehold.it/40/4e9689/ffffff&text=5';
+				playerPic = 'https://polymer-tut.appspot.com/images/avatar-08.svg';
 				break;
 			default:
-				playerPic = 'http://placehold.it/40/4e9689/ffffff&text=1';
+				playerPic = 'https://polymer-tut.appspot.com/images/avatar-05.svg';
 		}
 		$('.player-pic img').attr('src', playerPic);
 

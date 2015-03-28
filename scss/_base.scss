@@ -10,7 +10,7 @@
 body {
 	background: $color-01;
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
 	@include font-headine;
 	margin: 0;
 	color: inherit;
@@ -23,6 +23,7 @@ figure {
 }
 p {
 	margin: 0;
+	line-height: 1.4;
 }
 ul {
 	margin: 0;
