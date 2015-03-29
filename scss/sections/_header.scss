@@ -10,7 +10,7 @@
 	position: relative;
 	padding: $spacing/2 $spacing 0 $spacing/2;;
 	background: $color-04;
-	@include linear-gradient(to bottom, hsla(169, 31.6%, 48.7%, 1) 0%, $color-04 70%, hsla(169, 31.6%, 40.7%, 1) 100%);
+	@include linear-gradient(to bottom, hsla(169, 31.6%, 48.7%, 1) 0%, $color-04 70%, $color-04 100%);
 	color: #fff;
 	z-index: 1;
 	h1 {
@@ -28,7 +28,7 @@
 	@include linear-gradient(to bottom, hsla(84, 100%, 72.4%, 1) 0%, $color-02 70%, hsla(84, 100%, 69.4%, 1) 100%);
 	font-size: 0.8em;
 	border-bottom: 4px solid $color-04;
-	box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+	@include ds-box-shadow (rgba(0,0,0,0.3));
 }
 .restaurant-info-box {
 	float: left;

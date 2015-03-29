@@ -27,9 +27,27 @@
   	height: 30px;
   }
 }
-.button-settings {
+.button-settings, .button-alert {
 	position: relative;
   top: 7px;
+}
+.button-alert {
+	margin-right: $spacing;
+}
+.alert-count {
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	position: absolute;
+	display: block;
+	top: -8px;
+	right: -8px;
+	color: #fff;
+	background: $color-red;
+	text-align: center;
+	box-sizing: border-box;
+	padding-top: 2px;
+	font-weight: bold;
 }
 .player-name, .player-level {
 	font-weight: bold;

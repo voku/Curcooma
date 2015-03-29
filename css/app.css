@@ -510,7 +510,7 @@ h1, h2 {
 
 /* line 18, ../scss/_base.scss */
 h1 {
-  font-size: 2.6em;
+  font-size: 2em;
 }
 
 /* line 21, ../scss/_base.scss */
@@ -579,21 +579,47 @@ button {
 }
 
 /* line 30, ../scss/modules/_player-section.scss */
-.button-settings {
+.button-settings, .button-alert {
   position: relative;
   top: 7px;
 }
 
 /* line 34, ../scss/modules/_player-section.scss */
+.button-alert {
+  margin-right: 20px;
+}
+
+/* line 37, ../scss/modules/_player-section.scss */
+.alert-count {
+  width: 22px;
+  height: 22px;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
+  position: absolute;
+  display: block;
+  top: -8px;
+  right: -8px;
+  color: #fff;
+  background: #ff6868;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 2px;
+  font-weight: bold;
+}
+
+/* line 52, ../scss/modules/_player-section.scss */
 .player-name, .player-level {
   font-weight: bold;
 }
 
-/* line 37, ../scss/modules/_player-section.scss */
+/* line 55, ../scss/modules/_player-section.scss */
 .player-pic {
   float: right;
 }
-/* line 39, ../scss/modules/_player-section.scss */
+/* line 57, ../scss/modules/_player-section.scss */
 .player-pic img {
   position: relative;
   top: -5px;
@@ -604,7 +630,7 @@ button {
   /*box-shadow: 3px 3px 4px rgba(0,0,0,0.2);*/
 }
 
-/* line 47, ../scss/modules/_player-section.scss */
+/* line 65, ../scss/modules/_player-section.scss */
 .player-info {
   float: right;
   display: block;
@@ -623,11 +649,11 @@ button {
   padding: 10px 20px 0 10px;
   background: #4e9689;
   background: #55a395;
-  background: -webkit-linear-gradient(top, #55a395 0%, #4e9689 70%, #47897d 100%);
-  background: -webkit-gradient(linear, left top, left bottom, from(#55a395), color-stop(70%, #4e9689), to(#47897d));
-  background: -moz-linear-gradient(top, #55a395 0%, #4e9689 70%, #47897d 100%);
-  background: -o-linear-gradient(top, #55a395 0%, #4e9689 70%, #47897d 100%);
-  background: linear-gradient(to bottom, #55a395 0%, #4e9689 70%, #47897d 100%);
+  background: -webkit-linear-gradient(top, #55a395 0%, #4e9689 70%, #4e9689 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#55a395), color-stop(70%, #4e9689), to(#4e9689));
+  background: -moz-linear-gradient(top, #55a395 0%, #4e9689 70%, #4e9689 100%);
+  background: -o-linear-gradient(top, #55a395 0%, #4e9689 70%, #4e9689 100%);
+  background: linear-gradient(to bottom, #55a395 0%, #4e9689 70%, #4e9689 100%);
   color: #fff;
   z-index: 1;
 }
@@ -653,9 +679,9 @@ button {
   background: linear-gradient(to bottom, #c7ff72 0%, #c3ff68 70%, #c1ff63 100%);
   font-size: 0.8em;
   border-bottom: 4px solid #4e9689;
-  -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-     -moz-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-          box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+     -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* line 33, ../scss/sections/_header.scss */
@@ -727,11 +753,11 @@ button {
           box-sizing: border-box;
   padding-top: 145px;
   background: #fff;
-  background: -webkit-linear-gradient(top, #fff 0%, #f4fce8 30%, #f0fbdf 100%);
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(30%, #f4fce8), to(#f0fbdf));
-  background: -moz-linear-gradient(top, #fff 0%, #f4fce8 30%, #f0fbdf 100%);
-  background: -o-linear-gradient(top, #fff 0%, #f4fce8 30%, #f0fbdf 100%);
-  background: linear-gradient(to bottom, #fff 0%, #f4fce8 30%, #f0fbdf 100%);
+  background: -webkit-linear-gradient(top, #fff 0%, #f4fce8 30%, #f4fce8 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(30%, #f4fce8), to(#f4fce8));
+  background: -moz-linear-gradient(top, #fff 0%, #f4fce8 30%, #f4fce8 100%);
+  background: -o-linear-gradient(top, #fff 0%, #f4fce8 30%, #f4fce8 100%);
+  background: linear-gradient(to bottom, #fff 0%, #f4fce8 30%, #f4fce8 100%);
   z-index: 0;
 }
 
@@ -741,37 +767,72 @@ button {
   height: 100%;
   position: fixed;
   left: 0;
-  top: 20px;
+  top: 22px;
   color: #fff;
+  z-index: 2;
 }
-/* line 29, ../scss/sections/_main.scss */
+/* line 30, ../scss/sections/_main.scss */
 .sidebar h3 {
   font-size: 1.1em;
   padding: 0 20px;
 }
 
-/* line 34, ../scss/sections/_main.scss */
-.navigation {
+/* line 35, ../scss/sections/_main.scss */
+.navi-opener {
+  position: absolute;
+  right: -50px;
+  width: 50px;
+  height: 50px;
+  bottom: 0;
+  background: #4e9689;
+  padding: 10px;
+  text-align: center;
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+     -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+/* line 45, ../scss/sections/_main.scss */
+.navi-opener svg {
+  width: 100%;
+  height: 100%;
+  fill: #c3ff68;
+}
+
+/* line 51, ../scss/sections/_main.scss */
+.navi-wrapper {
   position: relative;
   top: 110px;
-  left: 0;
-  background: #4e9689;
-  padding: 20px 0;
-  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-     -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-  background: #519d8f;
-  background: -webkit-linear-gradient(top, #519d8f 0%, #4e9689 70%, #4a8f83 100%);
-  background: -webkit-gradient(linear, left top, left bottom, from(#519d8f), color-stop(70%, #4e9689), to(#4a8f83));
-  background: -moz-linear-gradient(top, #519d8f 0%, #4e9689 70%, #4a8f83 100%);
-  background: -o-linear-gradient(top, #519d8f 0%, #4e9689 70%, #4a8f83 100%);
-  background: linear-gradient(to bottom, #519d8f 0%, #4e9689 70%, #4a8f83 100%);
 }
-/* line 42, ../scss/sections/_main.scss */
+
+/* line 55, ../scss/sections/_main.scss */
+.navigation {
+  position: relative;
+  left: 0;
+  padding: 20px 0;
+  background: #4e9689;
+  max-height: 120px;
+  -webkit-transition: max-height 0.3s;
+     -moz-transition: max-height 0.3s;
+       -o-transition: max-height 0.3s;
+          transition: max-height 0.3s;
+  overflow: hidden;
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+     -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+/* line 64, ../scss/sections/_main.scss */
+.navigation.open {
+  max-height: 1000px;
+  -webkit-transition: max-height 0.6s;
+     -moz-transition: max-height 0.6s;
+       -o-transition: max-height 0.6s;
+          transition: max-height 0.6s;
+}
+/* line 68, ../scss/sections/_main.scss */
 .navigation ul {
   list-style: none;
 }
-/* line 45, ../scss/sections/_main.scss */
+/* line 71, ../scss/sections/_main.scss */
 .navigation a {
   text-decoration: none;
   color: #4e9689;
@@ -788,12 +849,12 @@ button {
        -o-transition: color 0.2s;
           transition: color 0.2s;
 }
-/* line 57, ../scss/sections/_main.scss */
+/* line 83, ../scss/sections/_main.scss */
 .navigation a span {
   position: relative;
   z-index: 1;
 }
-/* line 61, ../scss/sections/_main.scss */
+/* line 87, ../scss/sections/_main.scss */
 .navigation a:before {
   position: absolute;
   top: 0;
@@ -808,7 +869,7 @@ button {
           transition: left 0.2s;
   content: '';
 }
-/* line 72, ../scss/sections/_main.scss */
+/* line 98, ../scss/sections/_main.scss */
 .navigation a:hover {
   color: #c3ff68;
   -webkit-transition: color 0.3s;
@@ -816,7 +877,7 @@ button {
        -o-transition: color 0.3s;
           transition: color 0.3s;
 }
-/* line 75, ../scss/sections/_main.scss */
+/* line 101, ../scss/sections/_main.scss */
 .navigation a:hover:before {
   left: 0;
   -webkit-transition: left 0.3s;
@@ -825,21 +886,52 @@ button {
           transition: left 0.3s;
 }
 
-/* line 82, ../scss/sections/_main.scss */
+/* line 108, ../scss/sections/_main.scss */
+.navigation + .navi-opener svg {
+  -webkit-transition: -webkit-transform 0.3s;
+     -moz-transition: -moz-transform 0.3s;
+       -o-transition: -o-transform 0.3s;
+          transition: transform 0.3s;
+  -webkit-transform: rotate(90deg);
+     -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+       -o-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+/* line 112, ../scss/sections/_main.scss */
+.navigation.open + .navi-opener svg {
+  -webkit-transform: rotate(270deg);
+     -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+       -o-transform: rotate(270deg);
+          transform: rotate(270deg);
+  -webkit-transition: -webkit-transform 0.6;
+     -moz-transition: -moz-transform 0.6;
+       -o-transition: -o-transform 0.6;
+          transition: transform 0.6;
+}
+
+/* line 116, ../scss/sections/_main.scss */
 .local-time-container {
   padding-right: 20px;
   padding-left: 20px;
   font-size: 0.9em;
 }
-/* line 86, ../scss/sections/_main.scss */
+/* line 120, ../scss/sections/_main.scss */
 .local-time-container strong {
   font-size: 1.1em;
   color: #c3ff68;
 }
 
-/* line 91, ../scss/sections/_main.scss */
+/* line 126, ../scss/sections/_main.scss */
 .content {
-  float: right;
+  width: 100%;
+}
+
+/* line 129, ../scss/sections/_main.scss */
+.content-headline {
+  margin-left: 290px;
 }
 
 /**
