@@ -501,6 +501,11 @@ body {
 }
 
 /* line 13, ../scss/_base.scss */
+* {
+  outline: none;
+}
+
+/* line 16, ../scss/_base.scss */
 h1, h2 {
   font: 400 2.5em/1.4 "Luckiest Guy", cursive;
   color: #1e1e1e;
@@ -508,34 +513,34 @@ h1, h2 {
   color: inherit;
 }
 
-/* line 18, ../scss/_base.scss */
+/* line 21, ../scss/_base.scss */
 h1 {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
-/* line 21, ../scss/_base.scss */
+/* line 24, ../scss/_base.scss */
 figure {
   margin: 0;
 }
 
-/* line 24, ../scss/_base.scss */
+/* line 27, ../scss/_base.scss */
 p {
   margin: 0;
   line-height: 1.4;
 }
 
-/* line 28, ../scss/_base.scss */
+/* line 31, ../scss/_base.scss */
 ul {
   margin: 0;
   padding: 0;
 }
 
-/* line 32, ../scss/_base.scss */
+/* line 35, ../scss/_base.scss */
 .icon {
   fill: currentColor;
 }
 
-/* line 35, ../scss/_base.scss */
+/* line 38, ../scss/_base.scss */
 button {
   background: none;
   border: 0;

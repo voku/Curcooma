@@ -127,7 +127,58 @@
 	width: 100%;
 }
 .content-headline {
-	margin-left: 290px;
+	margin-left: 330px;
+	margin-top: $spacing;
+}
+.content-nav {
+  list-style: none;
+  margin-top: 33px;
+  border-bottom: 2px solid $color-04;
+	li {
+		display: inline-block;		
+		border: 2px solid $color-04;
+		border-bottom: 0;		
+	  background: $color-04;
+		color: #fff;
+		margin-right: -5px;
+		transition: background 0.2s;
+		transform: scale(0.9);
+		bottom: -2px;
+		position: relative;				
+		&:first-child {			
+			margin-left: 330px;
+		}
+		&.active {			
+			background: $color-01;
+			color: inherit;
+			transition: background 0.2s;
+			transform: scale(1);
+			bottom: -1px;
+			button {
+				background: $color-01;
+				transition: background 0.2s;
+			}
+		}
+		button {
+			display: block; 
+			height: 48px;
+			box-sizing: border-box;
+			padding: 10px $spacing;
+		  position: relative;
+		  bottom: -1px;
+		  background: $color-04;
+		  transition: background 0.2s;
+		  font-weight: bold;
+		}
+	}
+}
+.content-container {
+	padding-top: $spacing*2;
+	h2 {
+		@include font-text;
+		color: $color-04;
+		font-size: 1.4em;
+	}
 }
 
 // Media Queries (from min to max)
