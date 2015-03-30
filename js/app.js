@@ -16,6 +16,12 @@
 	 			target.removeClass('open');
 	 		}
  		});
+ 		$(document).mouseup(function (e) {
+	    var container = $('.sidebar');
+	    if (!container.is(e.target) && container.has(e.target).length === 0) {
+	        target.removeClass('open');
+	    }
+		});
  });
 
  $(document).ready(function() {
