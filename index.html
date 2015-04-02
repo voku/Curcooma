@@ -41,13 +41,10 @@
 	<style type="text/css">
 		/* Above-The-Fold-Styles go here */
 	</style>
-
-	<!-- If IE8 should be supported, anyway -->
-	<!--[if lt IE 9]>
-		<script src="vendor/html5shiv.min.js"></script>
-	<![endif]-->
-
+	
+	<!-- Web Components stuff -->
 	<link rel="import" href="vendor/bower/polymer/polymer.html">
+	<link rel="import" href="vendor/bower/app-router/app-router.html">
 </head>
 
 <body>
@@ -139,12 +136,12 @@
 				<h3>Was möchtest du tun?</h3>
 	    
 					<ul>
-						<li><a href="#" title="Die Statistik lügt nicht"><span>Meine Entwicklung ansehen</span></a></li>
-						<li><a href="#" title="Stelle eine Speisenkarte zusammen, kümmer dich um die Inneneinrichtung oder verwalte dein Kapital"><span>Mein Restaurant verwalten</span></a></li>
-						<li><a href="#" title="Du brauchst das beste Personal damit dein Restaurant läuft"><span>Mein Personal verwalten</span></a></li>
-						<li><a href="#" title="Kaufe Waren für deine Speisekarte und entdecke manchmal ungewöhnliche Dinge auf dem Großmarkt"><span>Auf den Großmarkt gehen</span></a></li>
-						<li><a href="#" title="Entwickel knackige Marketing-Strategien für dein Restaurant"><span>Werbung machen</span></a></li>
-						<li><a href="#" title="Mach mal Feierabend und komm morgen wieder"><span>Mein Spiel verlassen</span></a></li>
+						<li><a href="#/dashboard" title="Die Statistik lügt nicht"><span>Meine Entwicklung ansehen</span></a></li>
+						<li><a href="#/restaurant" title="Stelle eine Speisekarte zusammen, kümmer dich um die Inneneinrichtung oder verwalte dein Kapital"><span>Mein Restaurant verwalten</span></a></li>
+						<li><a href="#/personal" title="Du brauchst das beste Personal damit dein Restaurant läuft"><span>Mein Personal verwalten</span></a></li>
+						<li><a href="#/grossmarkt" title="Kaufe Waren für deine Speisekarte und entdecke manchmal ungewöhnliche Dinge auf dem Großmarkt"><span>Auf den Großmarkt gehen</span></a></li>
+						<li><a href="#/marketing" title="Entwickel knackige Marketing-Strategien für dein Restaurant"><span>Werbung machen</span></a></li>
+						<li><a href="#/goodbye" title="Mach mal Feierabend und komm morgen wieder"><span>Mein Spiel verlassen</span></a></li>
 					</ul>					
 				</nav>
 				<button class="navi-opener open"><svg class="icon icon-circle-right"><use xlink:href="#icon-circle-right"></use></svg></button>
@@ -158,26 +155,29 @@
 			<nav class="content-nav">
 				<!--ul>li*3>button>{content01}-->
 				<ul>
-					<li class="active"><button>Speisenkarte erstellen</button></li>
+					<li class="active"><button>Speisekarte zusammenstellen</button></li>
 					<li><button>Innenausbau planen</button></li>
 					<li><button>Geschäftsbedingungen festlegen</button></li>
 					<li><button>Geldgeschäfte erledigen</button></li>
 				</ul>
 			</nav>
 			<div class="content-container">
-				<div class="content-intro">
-					<!--<h2>Speisenkarte erstellen</h2>-->
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat magni ea, quisquam dolorem. Et laudantium veniam veritatis, facilis reiciendis iure accusamus? Obcaecati quisquam dolor inventore eveniet aliquid.</p>
-				</div>
-				<div class="content-body">
-				</div>
+				<app-router>
+					<app-route path="/restaurant" import="/pages/restaurant-page.html"><restaurant-page></restaurant-page></app-route>
+					<app-route path="/restaurant" import="/pages/dashboard-page.html"><dashboard-page></dashboard-page></app-route>
+					<app-route path="/personal" import="/pages/personal-page.html"><personal-page></personal-page></app-route>
+					<app-route path="/grossmarkt" import="/pages/grossmarkt-page.html"><grossmarkt-page></grossmarkt-page></app-route>
+					<app-route path="/marketing" import="/pages/marketing-page.html"><marketing-page></marketing-page></app-route>
+					<app-route path="/goodbye" import="/pages/goodbye-page.html"><goodbye-page></goodbye-page></app-route>
+				</app-router>
 			</div>
 		</section>
 
 		<footer class="footer" role="contentinfo"></footer>
 	</main>
-	<aside role="complementary"></aside>
 	<script src="vendor/modernizr.custom.67687.js"></script>
+	<!--<script src="vendor/bower/webcomponentsjs/webcomponents.min.js"></script>-->
+	
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="vendor/bower/jquery/dist/jquery.min.js"><\/script>')</script>
 
