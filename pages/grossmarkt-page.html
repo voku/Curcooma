@@ -1,13 +1,26 @@
 <!-- Web Components stuff -->
-<link rel="import" href="vendor/bower/polymer/polymer.html">
+<link rel="import" href="../vendor/bower/polymer/polymer.html">
 
-<polymer-element name="restaurant-page" noscript>
+<polymer-element name="grossmarkt-page" noscript>
   <template>
+  <link rel="stylesheet" href="../css/app.css">
+    <h1 class="content-headline">Auf dem Großmarkt</h1>
+			<nav class="content-nav">
+				<!--ul>li*3>button>{content01}-->
+				<ul>
+					<li class="active"><button>Speisekarte zusammenstellen</button></li>
+					<li><button>Innenausbau planen</button></li>
+					<li><button>Geschäftsbedingungen festlegen</button></li>
+					<li><button>Geldgeschäfte erledigen</button></li>
+				</ul>
+			</nav>
+			<div class="content-container">
     <div class="content-intro">
 			<!--<h2>Speisenkarte erstellen</h2>-->
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat magni ea, quisquam dolorem. Et laudantium veniam veritatis, facilis reiciendis iure accusamus? Obcaecati quisquam dolor inventore eveniet aliquid.</p>
 		</div>
 		<div class="content-body bv-cf">
+		</div>
 		</div>
   </template>
 </polymer-element>
