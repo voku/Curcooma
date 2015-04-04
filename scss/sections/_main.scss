@@ -5,10 +5,16 @@
 * @author [HZ]
 * @dependency _app_settings.scss
 */
+body {
+	background-color: $color-01;
+	background-image: url('http://lorempixel.com/1920/300/food');
+	background-size: 100%;
+	background-repeat: no-repeat;
 
+}
 .main {
-	padding: 0 $spacing $spacing/2 $spacing;
-	color: $color-04;
+	padding: 0 0 $spacing/2 0;
+	color: $color-01;
 	position: absolute;
   width: 100%;
   height: 100%;
@@ -16,7 +22,7 @@
   left: 0;
   box-sizing: border-box;
   padding-top: 145px;
-	@include linear-gradient(to bottom, #fff 0%, $color-01 30%, $color-01 100%);
+	/*@include linear-gradient(to bottom, #fff 0%, $color-01 30%, $color-01 100%);*/
 	z-index: 0;
 }
 .sidebar {
@@ -45,6 +51,7 @@
 
 .content {
 	width: 100%;
+	box-sizing: border-box;
 }
 .content-headline {
 	margin-left: 330px;
@@ -52,12 +59,14 @@
 }
 
 .content-container {
-	padding-top: $spacing;
+	padding: $spacing;
+	color: $color-04;
 	h2 {
 		@include font-text;
 		color: $color-04;
 		font-size: 1.4em;
 	}
+	background: $color-01;
 }
 .content-intro {
 	margin-left: 330px;

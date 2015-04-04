@@ -507,7 +507,7 @@ body {
 
 /* line 16, ../scss/_base.scss */
 h1, h2 {
-  font: 400 2.5em/1.4 "Luckiest Guy", cursive;
+  font: 400 2.5em/1.4 "Sansita One", cursive;
   color: #1e1e1e;
   margin: 0;
   color: inherit;
@@ -917,7 +917,7 @@ button {
 
 /* line 44, ../scss/sections/_header.scss */
 .restaurant-info-hl {
-  font: 400 2.5em/1.4 "Luckiest Guy", cursive;
+  font: 400 2.5em/1.4 "Sansita One", cursive;
   color: #1e1e1e;
   font-size: 1.8em;
   color: #4e9689;
@@ -955,10 +955,20 @@ button {
 * @author [HZ]
 * @dependency _app_settings.scss
 */
-/* line 9, ../scss/sections/_main.scss */
+/* line 8, ../scss/sections/_main.scss */
+body {
+  background-color: #f4fce8;
+  background-image: url("http://lorempixel.com/1920/300/food");
+  -moz-background-size: 100%;
+    -o-background-size: 100%;
+       background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+/* line 15, ../scss/sections/_main.scss */
 .main {
-  padding: 0 20px 10px 20px;
-  color: #4e9689;
+  padding: 0 0 10px 0;
+  color: #f4fce8;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -968,16 +978,11 @@ button {
      -moz-box-sizing: border-box;
           box-sizing: border-box;
   padding-top: 145px;
-  background: #fff;
-  background: -webkit-linear-gradient(top, #fff 0%, #f4fce8 30%, #f4fce8 100%);
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(30%, #f4fce8), to(#f4fce8));
-  background: -moz-linear-gradient(top, #fff 0%, #f4fce8 30%, #f4fce8 100%);
-  background: -o-linear-gradient(top, #fff 0%, #f4fce8 30%, #f4fce8 100%);
-  background: linear-gradient(to bottom, #fff 0%, #f4fce8 30%, #f4fce8 100%);
+  /*@include linear-gradient(to bottom, #fff 0%, $color-01 30%, $color-01 100%);*/
   z-index: 0;
 }
 
-/* line 22, ../scss/sections/_main.scss */
+/* line 28, ../scss/sections/_main.scss */
 .sidebar {
   width: 270px;
   height: 100%;
@@ -987,40 +992,45 @@ button {
   color: #fff;
   z-index: 2;
 }
-/* line 30, ../scss/sections/_main.scss */
+/* line 36, ../scss/sections/_main.scss */
 .sidebar h3 {
   font-size: 1.1em;
   padding: 0 20px;
 }
 
-/* line 36, ../scss/sections/_main.scss */
+/* line 42, ../scss/sections/_main.scss */
 .local-time-container {
   padding-right: 20px;
   padding-left: 20px;
   font-size: 0.9em;
 }
-/* line 40, ../scss/sections/_main.scss */
+/* line 46, ../scss/sections/_main.scss */
 .local-time-container strong {
   font-size: 1.1em;
   color: #c3ff68;
 }
 
-/* line 46, ../scss/sections/_main.scss */
+/* line 52, ../scss/sections/_main.scss */
 .content {
   width: 100%;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-/* line 49, ../scss/sections/_main.scss */
+/* line 56, ../scss/sections/_main.scss */
 .content-headline {
   margin-left: 330px;
   margin-top: 20px;
 }
 
-/* line 54, ../scss/sections/_main.scss */
+/* line 61, ../scss/sections/_main.scss */
 .content-container {
-  padding-top: 20px;
+  padding: 20px;
+  color: #4e9689;
+  background: #f4fce8;
 }
-/* line 56, ../scss/sections/_main.scss */
+/* line 64, ../scss/sections/_main.scss */
 .content-container h2 {
   font: 400 1em/1.4 sans-serif;
   color: #1e1e1e;
@@ -1028,7 +1038,7 @@ button {
   font-size: 1.4em;
 }
 
-/* line 62, ../scss/sections/_main.scss */
+/* line 71, ../scss/sections/_main.scss */
 .content-intro {
   margin-left: 330px;
   max-width: 720px;

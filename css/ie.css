@@ -507,7 +507,7 @@ body {
 
 /* line 16, ../scss/_base.scss */
 h1, h2 {
-  font: 400 2.5em/1.4 "Luckiest Guy", cursive;
+  font: 400 2.5em/1.4 "Sansita One", cursive;
   color: #1e1e1e;
   margin: 0;
   color: inherit;
@@ -547,4 +547,5 @@ button {
   padding: 0;
   margin: 0;
 }
+
 /*# sourceMappingURL=ie.css.map */
