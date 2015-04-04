@@ -824,21 +824,22 @@ button {
           transition: background 0.2s;
 }
 /* line 29, ../scss/modules/_content-navi.scss */
-.content-nav li.active button {
+.content-nav li.active button, .content-nav li.active a {
   background: #f4fce8;
   -webkit-transition: background 0.2s;
      -moz-transition: background 0.2s;
        -o-transition: background 0.2s;
           transition: background 0.2s;
+  color: #4e9689;
 }
-/* line 34, ../scss/modules/_content-navi.scss */
-.content-nav li button {
+/* line 35, ../scss/modules/_content-navi.scss */
+.content-nav li a, .content-nav li button {
   display: block;
   height: 48px;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 10px 20px;
+  padding: 13px 20px;
   position: relative;
   bottom: -2px;
   background: #4e9689;
@@ -847,6 +848,8 @@ button {
        -o-transition: background 0.2s;
           transition: background 0.2s;
   font-weight: bold;
+  color: #fff;
+  text-decoration: none;
 }
 
 /**

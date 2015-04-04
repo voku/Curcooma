@@ -1,40 +1,37 @@
 <!-- Web Components stuff -->
 <link rel="import" href="../vendor/bower/polymer/polymer.html">
-
 <polymer-element name="marketing-page">
-  <template>
-  <link rel="stylesheet" href="../css/app.css">
-    <h1 class="content-headline">Werbung &amp; Marketing</h1>
-			<nav class="content-nav" id="contentNav">
-				<!--ul>li*3>button>{content01}-->
-				<ul>
-					<li class="active"><button>Speisekarte zusammenstellen</button></li>
-					<li><button>Innenausbau planen</button></li>
-					<li><button>Geschäftsbedingungen festlegen</button></li>
-					<li><button>Geldgeschäfte erledigen</button></li>
-				</ul>
-			</nav>
-			<div class="content-container">
+<template>
+<link rel="stylesheet" href="../css/app.css">
+<h1 class="content-headline">Werbung &amp; Marketing</h1>
+<nav class="content-nav" id="contentNav">
+    <!--ul>li*3>button>{content01}-->
+    <ul>
+        <li class="active"><button>Speisekarte zusammenstellen</button></li>
+        <li><button>Innenausbau planen</button></li>
+        <li><button>Geschäftsbedingungen festlegen</button></li>
+        <li><button>Geldgeschäfte erledigen</button></li>
+    </ul>
+</nav>
+<div class="content-container">
     <div class="content-intro">
-			<!--<h2>Speisenkarte erstellen</h2>-->
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat magni ea, quisquam dolorem. Et laudantium veniam veritatis, facilis reiciendis iure accusamus? Obcaecati quisquam dolor inventore eveniet aliquid.</p>
-		</div>
-		<div class="content-body bv-cf">
-		</div>
-		</div>
-  </template>
-  <script>
-	 Polymer('marketing-page', {
+        <!--<h2>Speisenkarte erstellen</h2>-->
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat magni ea, quisquam dolorem. Et laudantium veniam veritatis, facilis reiciendis iure accusamus? Obcaecati quisquam dolor inventore eveniet aliquid.</p>
+    </div>
+    <div class="content-body bv-cf">
+    </div>
+</div>
+</template>
+<script>
+Polymer('marketing-page', {
         domReady: function () {
-        	// To make jQuery selectors work here, define an element with an ID! (ID must not have special characters)
-			 		var clickTarget = $(this.$.contentNav).find('li');
-			 		clickTarget.on('click', function() {
-			 			clickTarget.removeClass('active');
-			 			$(this).addClass('active');
-			 		});
+        // To make jQuery selectors work here, define an element with an ID! (ID must not have special characters)
+var clickTarget = $(this.$.contentNav).find('li');
+clickTarget.on('click', function() {
+clickTarget.removeClass('active');
+$(this).addClass('active');
+});
         }
-    });      
-	</script>
+        });
+</script>
 </polymer-element>
-				
-		

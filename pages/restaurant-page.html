@@ -1,42 +1,37 @@
 <!-- Web Components stuff -->
 <link rel="import" href="../vendor/bower/polymer/polymer.html">
-
 <polymer-element name="restaurant-page">
-  <template>
-  <link rel="stylesheet" href="../css/app.css">
-  <h1 class="content-headline">Mein Restaurant verwalten</h1>
-			<nav class="content-nav" id="contentNav">
-				<!--ul>li*3>button>{content01}-->
-				<ul>
-					<li class="active"><button>Speisekarte zusammenstellen</button></li>
-					<li><button>Innenausbau planen</button></li>
-					<li><button>Geschäftsbedingungen festlegen</button></li>
-					<li><button>Geldgeschäfte erledigen</button></li>
-				</ul>
-			</nav>
-			<div class="content-container">
-    <div class="content-intro">
-			<!--<h2>Speisenkarte erstellen</h2>-->
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat magni ea, quisquam dolorem. Et laudantium veniam veritatis, facilis reiciendis iure accusamus? Obcaecati quisquam dolor inventore eveniet aliquid.</p>
-		</div>
-		<div class="content-body bv-cf">
-		</div>
-		</div>
-
-  </template>
-  		<script>
-  		 Polymer('restaurant-page', {
-            domReady: function () {
-            	// To make jQuery selectors work here, define an element with an ID! (ID must not have special characters)
-					 		var clickTarget = $(this.$.contentNav).find('li');
-					 		clickTarget.on('click', function() {
-					 			clickTarget.removeClass('active');
-					 			$(this).addClass('active');
-					 		});
-            }
-        });      
- 			</script>
-
+<template>
+<link rel="stylesheet" href="../css/app.css">
+<h1 class="content-headline">Mein Restaurant verwalten</h1>
+<nav class="content-nav" id="contentNav">
+    <!--ul>li*3>button>{content01}-->
+    <ul>
+        <li class="active"><a href="#/restaurant/speisekarte" role="button">Speisekarte zusammenstellen</a></li>
+        <li><a href="#/restaurant/ausbau" role="button">Innenausbau planen</a></li>
+        <li><a href="#/restaurant/geschaeftsbedingungen" role="button">Geschäftsbedingungen festlegen</a></li>
+        <li><a href="#/restaurant/geldgeschaefte" role="button">Geldgeschäfte erledigen</a></li>
+    </ul>
+</nav>
+<div class="content-container">
+	<app-router>
+	  <app-route path="/restaurant/speisekarte" import="/components/speisekarte.html" template></app-route>
+	  <app-route path="/restaurant/ausbau" import="/components/ausbau.html" template></app-route>
+	  <app-route path="/restaurant/geschaeftsbedingungen" import="/components/geschaeftsbedingungen.html" template></app-route>
+	  <app-route path="/restaurant/geldgeschaefte" import="/components/geldgeschaefte.html" template></app-route>
+	 </app-router>    
+</div>
+</template>
+<script>
+	Polymer('restaurant-page', {
+    domReady: function () {
+			// To make jQuery selectors work here, define an element with an ID! (ID must not have special characters)
+			var clickTarget = $(this.$.contentNav).find('li');
+			clickTarget.on('click', function() {
+				clickTarget.removeClass('active');
+				$(this).addClass('active');
+			});
+    }
+	});
+</script>
 </polymer-element>
-				
-		

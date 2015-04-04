@@ -26,21 +26,24 @@
 			background: $color-01;
 			color: inherit;
 			transition: background 0.2s;
-			button {
+			button, a {
 				background: $color-01;
 				transition: background 0.2s;
+				color: $color-04
 			}
 		}
-		button {
+		a, button {
 			display: block; 
 			height: 48px;
 			box-sizing: border-box;
-			padding: 10px $spacing;
+			padding: 13px $spacing;
 		  position: relative;
 		  bottom: -2px;
 		  background: $color-04;
 		  transition: background 0.2s;
 		  font-weight: bold;
+		  color: #fff;
+		  text-decoration: none;
 		}
 	}
 }
