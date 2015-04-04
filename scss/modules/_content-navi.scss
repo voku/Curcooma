@@ -1,0 +1,57 @@
+/**
+*  Content Navi
+*
+* @desc Tab Navi in content section
+* @author [HZ]
+* @dependency _app_settings
+*/
+
+.content-nav {
+  list-style: none;
+  margin-top: 33px;
+  border-bottom: 2px solid $color-04;
+	li {
+		display: inline-block;		
+		border: 2px solid $color-04;
+		border-bottom: 0;		
+	  background: $color-04;
+		color: #fff;
+		margin-right: 0;
+		transition: background 0.2s;
+		position: relative;				
+		&:first-child {			
+			margin-left: 330px;
+		}
+		&.active {			
+			background: $color-01;
+			color: inherit;
+			transition: background 0.2s;
+			button {
+				background: $color-01;
+				transition: background 0.2s;
+			}
+		}
+		button {
+			display: block; 
+			height: 48px;
+			box-sizing: border-box;
+			padding: 10px $spacing;
+		  position: relative;
+		  bottom: -2px;
+		  background: $color-04;
+		  transition: background 0.2s;
+		  font-weight: bold;
+		}
+	}
+}
+
+// Media Queries (from min to max)
+@media (min-width: $breakpoint-min) { }
+
+@media (min-width: $breakpoint-small) { }
+
+@media (min-width: $breakpoint-medium) { }
+
+@media (min-width: $breakpoint-large) { }
+
+@media (min-width: $breakpoint-max) { }

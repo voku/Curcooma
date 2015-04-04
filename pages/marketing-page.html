@@ -1,11 +1,11 @@
 <!-- Web Components stuff -->
 <link rel="import" href="../vendor/bower/polymer/polymer.html">
 
-<polymer-element name="marketing-page" noscript>
+<polymer-element name="marketing-page">
   <template>
   <link rel="stylesheet" href="../css/app.css">
     <h1 class="content-headline">Werbung &amp; Marketing</h1>
-			<nav class="content-nav">
+			<nav class="content-nav" id="contentNav">
 				<!--ul>li*3>button>{content01}-->
 				<ul>
 					<li class="active"><button>Speisekarte zusammenstellen</button></li>
@@ -23,6 +23,18 @@
 		</div>
 		</div>
   </template>
+  <script>
+	 Polymer('marketing-page', {
+        domReady: function () {
+        	// To make jQuery selectors work here, define an element with an ID! (ID must not have special characters)
+			 		var clickTarget = $(this.$.contentNav).find('li');
+			 		clickTarget.on('click', function() {
+			 			clickTarget.removeClass('active');
+			 			$(this).addClass('active');
+			 		});
+        }
+    });      
+	</script>
 </polymer-element>
 				
 		

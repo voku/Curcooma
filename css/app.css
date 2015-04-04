@@ -642,6 +642,214 @@ button {
 }
 
 /**
+* Main Navigation
+*
+* @desc Navigation on sidebar
+* @author [HZ]
+* @dependency _app_settings
+*/
+/* line 8, ../scss/modules/_navigation.scss */
+.navi-opener {
+  position: absolute;
+  right: -50px;
+  width: 50px;
+  height: 50px;
+  bottom: 0;
+  background: #4e9689;
+  padding: 10px;
+  text-align: center;
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+     -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+/* line 18, ../scss/modules/_navigation.scss */
+.navi-opener svg {
+  width: 100%;
+  height: 100%;
+  fill: #c3ff68;
+}
+
+/* line 24, ../scss/modules/_navigation.scss */
+.navi-wrapper {
+  position: relative;
+  top: 110px;
+}
+
+/* line 28, ../scss/modules/_navigation.scss */
+.navigation {
+  position: relative;
+  left: 0;
+  padding: 20px 0;
+  background: #4e9689;
+  max-height: 120px;
+  -webkit-transition: max-height 0.3s;
+     -moz-transition: max-height 0.3s;
+       -o-transition: max-height 0.3s;
+          transition: max-height 0.3s;
+  overflow: hidden;
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+     -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+/* line 37, ../scss/modules/_navigation.scss */
+.navigation.open {
+  max-height: 1000px;
+  -webkit-transition: max-height 0.6s;
+     -moz-transition: max-height 0.6s;
+       -o-transition: max-height 0.6s;
+          transition: max-height 0.6s;
+}
+/* line 41, ../scss/modules/_navigation.scss */
+.navigation ul {
+  list-style: none;
+}
+/* line 44, ../scss/modules/_navigation.scss */
+.navigation a {
+  text-decoration: none;
+  color: #4e9689;
+  display: block;
+  padding: 20px;
+  background: #c3ff68;
+  border: 2px solid #4e9689;
+  margin: 0 2px;
+  font-weight: bold;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: color 0.2s;
+     -moz-transition: color 0.2s;
+       -o-transition: color 0.2s;
+          transition: color 0.2s;
+}
+/* line 56, ../scss/modules/_navigation.scss */
+.navigation a span {
+  position: relative;
+  z-index: 1;
+}
+/* line 60, ../scss/modules/_navigation.scss */
+.navigation a:before {
+  position: absolute;
+  top: 0;
+  left: -500px;
+  width: 400px;
+  height: 100px;
+  padding: 20px;
+  background: #4e9689;
+  -webkit-transition: left 0.2s;
+     -moz-transition: left 0.2s;
+       -o-transition: left 0.2s;
+          transition: left 0.2s;
+  content: '';
+}
+/* line 71, ../scss/modules/_navigation.scss */
+.navigation a:hover {
+  color: #c3ff68;
+  -webkit-transition: color 0.3s;
+     -moz-transition: color 0.3s;
+       -o-transition: color 0.3s;
+          transition: color 0.3s;
+}
+/* line 74, ../scss/modules/_navigation.scss */
+.navigation a:hover:before {
+  left: 0;
+  -webkit-transition: left 0.3s;
+     -moz-transition: left 0.3s;
+       -o-transition: left 0.3s;
+          transition: left 0.3s;
+}
+
+/* line 81, ../scss/modules/_navigation.scss */
+.navigation + .navi-opener svg {
+  -webkit-transition: -webkit-transform 0.3s;
+     -moz-transition: -moz-transform 0.3s;
+       -o-transition: -o-transform 0.3s;
+          transition: transform 0.3s;
+  -webkit-transform: rotate(90deg);
+     -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+       -o-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+/* line 85, ../scss/modules/_navigation.scss */
+.navigation.open + .navi-opener svg {
+  -webkit-transform: rotate(270deg);
+     -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+       -o-transform: rotate(270deg);
+          transform: rotate(270deg);
+  -webkit-transition: -webkit-transform 0.6;
+     -moz-transition: -moz-transform 0.6;
+       -o-transition: -o-transform 0.6;
+          transition: transform 0.6;
+}
+
+/**
+*  Content Navi
+*
+* @desc Tab Navi in content section
+* @author [HZ]
+* @dependency _app_settings
+*/
+/* line 9, ../scss/modules/_content-navi.scss */
+.content-nav {
+  list-style: none;
+  margin-top: 33px;
+  border-bottom: 2px solid #4e9689;
+}
+/* line 13, ../scss/modules/_content-navi.scss */
+.content-nav li {
+  display: inline-block;
+  border: 2px solid #4e9689;
+  border-bottom: 0;
+  background: #4e9689;
+  color: #fff;
+  margin-right: 0;
+  -webkit-transition: background 0.2s;
+     -moz-transition: background 0.2s;
+       -o-transition: background 0.2s;
+          transition: background 0.2s;
+  position: relative;
+}
+/* line 22, ../scss/modules/_content-navi.scss */
+.content-nav li:first-child {
+  margin-left: 330px;
+}
+/* line 25, ../scss/modules/_content-navi.scss */
+.content-nav li.active {
+  background: #f4fce8;
+  color: inherit;
+  -webkit-transition: background 0.2s;
+     -moz-transition: background 0.2s;
+       -o-transition: background 0.2s;
+          transition: background 0.2s;
+}
+/* line 29, ../scss/modules/_content-navi.scss */
+.content-nav li.active button {
+  background: #f4fce8;
+  -webkit-transition: background 0.2s;
+     -moz-transition: background 0.2s;
+       -o-transition: background 0.2s;
+          transition: background 0.2s;
+}
+/* line 34, ../scss/modules/_content-navi.scss */
+.content-nav li button {
+  display: block;
+  height: 48px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 20px;
+  position: relative;
+  bottom: -2px;
+  background: #4e9689;
+  -webkit-transition: background 0.2s;
+     -moz-transition: background 0.2s;
+       -o-transition: background 0.2s;
+          transition: background 0.2s;
+  font-weight: bold;
+}
+
+/**
 * Header
 *
 * @desc header
@@ -782,228 +990,34 @@ button {
   padding: 0 20px;
 }
 
-/* line 35, ../scss/sections/_main.scss */
-.navi-opener {
-  position: absolute;
-  right: -50px;
-  width: 50px;
-  height: 50px;
-  bottom: 0;
-  background: #4e9689;
-  padding: 10px;
-  text-align: center;
-  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-     -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-}
-/* line 45, ../scss/sections/_main.scss */
-.navi-opener svg {
-  width: 100%;
-  height: 100%;
-  fill: #c3ff68;
-}
-
-/* line 51, ../scss/sections/_main.scss */
-.navi-wrapper {
-  position: relative;
-  top: 110px;
-}
-
-/* line 55, ../scss/sections/_main.scss */
-.navigation {
-  position: relative;
-  left: 0;
-  padding: 20px 0;
-  background: #4e9689;
-  max-height: 120px;
-  -webkit-transition: max-height 0.3s;
-     -moz-transition: max-height 0.3s;
-       -o-transition: max-height 0.3s;
-          transition: max-height 0.3s;
-  overflow: hidden;
-  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-     -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-}
-/* line 64, ../scss/sections/_main.scss */
-.navigation.open {
-  max-height: 1000px;
-  -webkit-transition: max-height 0.6s;
-     -moz-transition: max-height 0.6s;
-       -o-transition: max-height 0.6s;
-          transition: max-height 0.6s;
-}
-/* line 68, ../scss/sections/_main.scss */
-.navigation ul {
-  list-style: none;
-}
-/* line 71, ../scss/sections/_main.scss */
-.navigation a {
-  text-decoration: none;
-  color: #4e9689;
-  display: block;
-  padding: 20px;
-  background: #c3ff68;
-  border: 2px solid #4e9689;
-  margin: 0 2px;
-  font-weight: bold;
-  overflow: hidden;
-  position: relative;
-  -webkit-transition: color 0.2s;
-     -moz-transition: color 0.2s;
-       -o-transition: color 0.2s;
-          transition: color 0.2s;
-}
-/* line 83, ../scss/sections/_main.scss */
-.navigation a span {
-  position: relative;
-  z-index: 1;
-}
-/* line 87, ../scss/sections/_main.scss */
-.navigation a:before {
-  position: absolute;
-  top: 0;
-  left: -500px;
-  width: 400px;
-  height: 100px;
-  padding: 20px;
-  background: #4e9689;
-  -webkit-transition: left 0.2s;
-     -moz-transition: left 0.2s;
-       -o-transition: left 0.2s;
-          transition: left 0.2s;
-  content: '';
-}
-/* line 98, ../scss/sections/_main.scss */
-.navigation a:hover {
-  color: #c3ff68;
-  -webkit-transition: color 0.3s;
-     -moz-transition: color 0.3s;
-       -o-transition: color 0.3s;
-          transition: color 0.3s;
-}
-/* line 101, ../scss/sections/_main.scss */
-.navigation a:hover:before {
-  left: 0;
-  -webkit-transition: left 0.3s;
-     -moz-transition: left 0.3s;
-       -o-transition: left 0.3s;
-          transition: left 0.3s;
-}
-
-/* line 108, ../scss/sections/_main.scss */
-.navigation + .navi-opener svg {
-  -webkit-transition: -webkit-transform 0.3s;
-     -moz-transition: -moz-transform 0.3s;
-       -o-transition: -o-transform 0.3s;
-          transition: transform 0.3s;
-  -webkit-transform: rotate(90deg);
-     -moz-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-       -o-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-/* line 112, ../scss/sections/_main.scss */
-.navigation.open + .navi-opener svg {
-  -webkit-transform: rotate(270deg);
-     -moz-transform: rotate(270deg);
-      -ms-transform: rotate(270deg);
-       -o-transform: rotate(270deg);
-          transform: rotate(270deg);
-  -webkit-transition: -webkit-transform 0.6;
-     -moz-transition: -moz-transform 0.6;
-       -o-transition: -o-transform 0.6;
-          transition: transform 0.6;
-}
-
-/* line 116, ../scss/sections/_main.scss */
+/* line 36, ../scss/sections/_main.scss */
 .local-time-container {
   padding-right: 20px;
   padding-left: 20px;
   font-size: 0.9em;
 }
-/* line 120, ../scss/sections/_main.scss */
+/* line 40, ../scss/sections/_main.scss */
 .local-time-container strong {
   font-size: 1.1em;
   color: #c3ff68;
 }
 
-/* line 126, ../scss/sections/_main.scss */
+/* line 46, ../scss/sections/_main.scss */
 .content {
   width: 100%;
 }
 
-/* line 129, ../scss/sections/_main.scss */
+/* line 49, ../scss/sections/_main.scss */
 .content-headline {
   margin-left: 330px;
   margin-top: 20px;
 }
 
-/* line 133, ../scss/sections/_main.scss */
-.content-nav {
-  list-style: none;
-  margin-top: 33px;
-  border-bottom: 2px solid #4e9689;
-}
-/* line 137, ../scss/sections/_main.scss */
-.content-nav li {
-  display: inline-block;
-  border: 2px solid #4e9689;
-  border-bottom: 0;
-  background: #4e9689;
-  color: #fff;
-  margin-right: 0;
-  -webkit-transition: background 0.2s;
-     -moz-transition: background 0.2s;
-       -o-transition: background 0.2s;
-          transition: background 0.2s;
-  position: relative;
-}
-/* line 146, ../scss/sections/_main.scss */
-.content-nav li:first-child {
-  margin-left: 330px;
-}
-/* line 149, ../scss/sections/_main.scss */
-.content-nav li.active {
-  background: #f4fce8;
-  color: inherit;
-  -webkit-transition: background 0.2s;
-     -moz-transition: background 0.2s;
-       -o-transition: background 0.2s;
-          transition: background 0.2s;
-}
-/* line 153, ../scss/sections/_main.scss */
-.content-nav li.active button {
-  background: #f4fce8;
-  -webkit-transition: background 0.2s;
-     -moz-transition: background 0.2s;
-       -o-transition: background 0.2s;
-          transition: background 0.2s;
-}
-/* line 158, ../scss/sections/_main.scss */
-.content-nav li button {
-  display: block;
-  height: 48px;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 10px 20px;
-  position: relative;
-  bottom: -2px;
-  background: #4e9689;
-  -webkit-transition: background 0.2s;
-     -moz-transition: background 0.2s;
-       -o-transition: background 0.2s;
-          transition: background 0.2s;
-  font-weight: bold;
-}
-
-/* line 171, ../scss/sections/_main.scss */
+/* line 54, ../scss/sections/_main.scss */
 .content-container {
   padding-top: 20px;
 }
-/* line 173, ../scss/sections/_main.scss */
+/* line 56, ../scss/sections/_main.scss */
 .content-container h2 {
   font: 400 1em/1.4 sans-serif;
   color: #1e1e1e;
@@ -1011,7 +1025,7 @@ button {
   font-size: 1.4em;
 }
 
-/* line 179, ../scss/sections/_main.scss */
+/* line 62, ../scss/sections/_main.scss */
 .content-intro {
   margin-left: 330px;
   max-width: 720px;

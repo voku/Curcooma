@@ -24,11 +24,11 @@
 		});
  });
 
- $(document).ready(function() {
+ /*$(document).ready(function() {
  		var clickTarget = $('.content-nav li');
  		clickTarget.on('click', function() {
  			clickTarget.removeClass('active');
  			$(this).addClass('active');
  		});
- });
+ });*/
 //# sourceMappingURL=app.pkgd.js.map
