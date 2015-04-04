@@ -3,7 +3,7 @@
 <polymer-element name="restaurant-page">
 <template>
 <link rel="stylesheet" href="../css/app.css">
-<h1 class="content-headline">Mein Restaurant verwalten</h1>
+<h1 class="content-headline" id="contentHeadline">Mein Restaurant verwalten</h1>
 <nav class="content-nav" id="contentNav">
     <!--ul>li*3>button>{content01}-->
     <ul>
@@ -27,10 +27,13 @@
     domReady: function () {
 			// To make jQuery selectors work here, define an element with an ID! (ID must not have special characters)
 			var clickTarget = $(this.$.contentNav).find('li');
+			var hlSign = $(this.$.contentHeadline);
 			clickTarget.on('click', function() {
 				clickTarget.removeClass('active');
 				$(this).addClass('active');
 			});
+			
+			hlSign.addClass('open');
     }
 	});
 </script>
