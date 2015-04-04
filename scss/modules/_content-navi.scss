@@ -9,11 +9,8 @@
 .content-nav {
   list-style: none;
   margin-top: 33px;
-  border-bottom: 2px solid $color-04;
 	li {
-		display: inline-block;		
-		border: 2px solid $color-04;
-		border-bottom: 0;		
+		display: inline-block;	
 	  background: $color-04;
 		color: #fff;
 		margin-right: 0;
@@ -36,14 +33,13 @@
 			display: block; 
 			height: 48px;
 			box-sizing: border-box;
-			padding: 13px $spacing;
+			padding: 15px $spacing 11px $spacing;
 		  position: relative;
-		  bottom: -2px;
 		  background: $color-04;
 		  transition: background 0.2s;
 		  font-weight: bold;
 		  color: #fff;
-		  text-decoration: none;
+		  text-decoration: none; 
 		}
 	}
 }

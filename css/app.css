@@ -794,13 +794,10 @@ button {
 .content-nav {
   list-style: none;
   margin-top: 33px;
-  border-bottom: 2px solid #4e9689;
 }
-/* line 13, ../scss/modules/_content-navi.scss */
+/* line 12, ../scss/modules/_content-navi.scss */
 .content-nav li {
   display: inline-block;
-  border: 2px solid #4e9689;
-  border-bottom: 0;
   background: #4e9689;
   color: #fff;
   margin-right: 0;
@@ -810,11 +807,11 @@ button {
           transition: background 0.2s;
   position: relative;
 }
-/* line 22, ../scss/modules/_content-navi.scss */
+/* line 19, ../scss/modules/_content-navi.scss */
 .content-nav li:first-child {
   margin-left: 330px;
 }
-/* line 25, ../scss/modules/_content-navi.scss */
+/* line 22, ../scss/modules/_content-navi.scss */
 .content-nav li.active {
   background: #f4fce8;
   color: inherit;
@@ -823,7 +820,7 @@ button {
        -o-transition: background 0.2s;
           transition: background 0.2s;
 }
-/* line 29, ../scss/modules/_content-navi.scss */
+/* line 26, ../scss/modules/_content-navi.scss */
 .content-nav li.active button, .content-nav li.active a {
   background: #f4fce8;
   -webkit-transition: background 0.2s;
@@ -832,16 +829,15 @@ button {
           transition: background 0.2s;
   color: #4e9689;
 }
-/* line 35, ../scss/modules/_content-navi.scss */
+/* line 32, ../scss/modules/_content-navi.scss */
 .content-nav li a, .content-nav li button {
   display: block;
   height: 48px;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 13px 20px;
+  padding: 15px 20px 11px 20px;
   position: relative;
-  bottom: -2px;
   background: #4e9689;
   -webkit-transition: background 0.2s;
      -moz-transition: background 0.2s;
@@ -955,17 +951,7 @@ button {
 * @author [HZ]
 * @dependency _app_settings.scss
 */
-/* line 8, ../scss/sections/_main.scss */
-body {
-  background-color: #f4fce8;
-  background-image: url("http://lorempixel.com/1920/300/food");
-  -moz-background-size: 100%;
-    -o-background-size: 100%;
-       background-size: 100%;
-  background-repeat: no-repeat;
-}
-
-/* line 15, ../scss/sections/_main.scss */
+/* line 11, ../scss/sections/_main.scss */
 .main {
   padding: 0 0 10px 0;
   color: #f4fce8;
@@ -979,10 +965,17 @@ body {
           box-sizing: border-box;
   padding-top: 145px;
   /*@include linear-gradient(to bottom, #fff 0%, $color-01 30%, $color-01 100%);*/
+  background-color: #f4fce8;
+  background-image: url("http://lorempixel.com/1920/400/food");
+  -moz-background-size: contain;
+    -o-background-size: contain;
+       background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left 130px;
   z-index: 0;
 }
 
-/* line 28, ../scss/sections/_main.scss */
+/* line 29, ../scss/sections/_main.scss */
 .sidebar {
   width: 270px;
   height: 100%;
@@ -992,25 +985,25 @@ body {
   color: #fff;
   z-index: 2;
 }
-/* line 36, ../scss/sections/_main.scss */
+/* line 37, ../scss/sections/_main.scss */
 .sidebar h3 {
   font-size: 1.1em;
   padding: 0 20px;
 }
 
-/* line 42, ../scss/sections/_main.scss */
+/* line 43, ../scss/sections/_main.scss */
 .local-time-container {
   padding-right: 20px;
   padding-left: 20px;
   font-size: 0.9em;
 }
-/* line 46, ../scss/sections/_main.scss */
+/* line 47, ../scss/sections/_main.scss */
 .local-time-container strong {
   font-size: 1.1em;
   color: #c3ff68;
 }
 
-/* line 52, ../scss/sections/_main.scss */
+/* line 53, ../scss/sections/_main.scss */
 .content {
   width: 100%;
   -webkit-box-sizing: border-box;
@@ -1018,19 +1011,42 @@ body {
           box-sizing: border-box;
 }
 
-/* line 56, ../scss/sections/_main.scss */
+/* line 57, ../scss/sections/_main.scss */
 .content-headline {
   margin-left: 330px;
   margin-top: 20px;
-}
-
-/* line 61, ../scss/sections/_main.scss */
-.content-container {
-  padding: 20px;
-  color: #4e9689;
-  background: #f4fce8;
+  display: inline-block;
+  padding: 10px 20px;
+  position: relative;
+  background: rgba(78, 150, 137, 0.6);
 }
 /* line 64, ../scss/sections/_main.scss */
+.content-headline:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 300px;
+  border-left: 2px solid #4e9689;
+}
+/* line 72, ../scss/sections/_main.scss */
+.content-headline:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 300px;
+  border-right: 2px solid #4e9689;
+}
+
+/* line 82, ../scss/sections/_main.scss */
+.content-container {
+  padding: 40px 20px;
+  color: #4e9689;
+  background: #f4fce8;
+  min-height: 300px;
+}
+/* line 85, ../scss/sections/_main.scss */
 .content-container h2 {
   font: 400 1em/1.4 sans-serif;
   color: #1e1e1e;
@@ -1038,9 +1054,8 @@ body {
   font-size: 1.4em;
 }
 
-/* line 71, ../scss/sections/_main.scss */
+/* line 93, ../scss/sections/_main.scss */
 .content-intro {
-  margin-left: 330px;
   max-width: 720px;
 }
 

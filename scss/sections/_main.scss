@@ -6,11 +6,7 @@
 * @dependency _app_settings.scss
 */
 body {
-	background-color: $color-01;
-	background-image: url('http://lorempixel.com/1920/300/food');
-	background-size: 100%;
-	background-repeat: no-repeat;
-
+	
 }
 .main {
 	padding: 0 0 $spacing/2 0;
@@ -23,6 +19,11 @@ body {
   box-sizing: border-box;
   padding-top: 145px;
 	/*@include linear-gradient(to bottom, #fff 0%, $color-01 30%, $color-01 100%);*/
+	background-color: $color-01;
+	background-image: url('http://lorempixel.com/1920/400/food');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: left 130px;
 	z-index: 0;
 }
 .sidebar {
@@ -55,11 +56,31 @@ body {
 }
 .content-headline {
 	margin-left: 330px;
-	margin-top: $spacing;
+  margin-top: $spacing;
+  display: inline-block;
+  padding: 10px $spacing;
+  position: relative;
+  background: hsla(169, 31.6%, 44.7%, 0.6);
+  &:after {
+  	content: '';
+  	position: absolute;
+		right: 0;
+		bottom: 0;
+		height: 300px;
+		border-left: 2px solid $color-04;
+  }
+   &:before {
+  	content: '';
+  	position: absolute;
+		left: 0;
+		bottom: 0;
+		height: 300px;
+		border-right: 2px solid $color-04;
+  }
 }
 
 .content-container {
-	padding: $spacing;
+	padding: $spacing*2 $spacing;
 	color: $color-04;
 	h2 {
 		@include font-text;
@@ -67,9 +88,9 @@ body {
 		font-size: 1.4em;
 	}
 	background: $color-01;
+	min-height: 300px;
 }
 .content-intro {
-	margin-left: 330px;
 	max-width: 720px
 }
 

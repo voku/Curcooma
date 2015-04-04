@@ -50,15 +50,7 @@ module.exports = function(grunt) {
       build: ["js-min/*", "css/*", "css-min/*"]
     },
 
-    penthouse: {
-      dist : {
-        outfile : 'css/critical-path.css',
-        css : 'css/app.css',
-        url : '<%= pkg.url %>',
-        width : 1300,
-        height : 900
-      }
-    },
+    
 
     compass: {
       dist: {
@@ -172,7 +164,7 @@ module.exports = function(grunt) {
 
       sass: {
         files: ['scss/**/*.scss'],
-        tasks: ['compass:dist', 'autoprefixer', 'penthouse:dist', 'csswring:minify'],
+        tasks: ['compass:dist', 'autoprefixer', 'csswring:minify'],
         options: {
           livereload: true,
           spawn : false       // for grunt-contrib-watch v0.5.0+, "nospawn: true" for lower versions.
@@ -196,7 +188,7 @@ module.exports = function(grunt) {
   grunt.registerTask(
       'build',
       'Build this website ... yeaahhh!',
-      [ 'clean:build', 'concat:js', 'uglify:js', 'concat:cssFonts', 'compass:dist', 'autoprefixer', 'penthouse:dist', 'csswring:minify']
+      [ 'clean:build', 'concat:js', 'uglify:js', 'concat:cssFonts', 'compass:dist', 'autoprefixer', 'csswring:minify']
   );
 
 };
