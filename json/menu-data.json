@@ -1,0 +1,28 @@
+{
+    "_id": "55113b93eb77d46bb9f0ce49",
+    "index": 0,
+    "guid": "a4331e8f-f3fc-48b1-a2be-92f797f4cc39",
+    "isActive": true,
+    "menus": [{
+        "index": 0,
+        "name": "menu01",
+        "category": "Hauptspeise",
+        "nationality": "Griechisch",
+        "points": 3,
+        "ingredients": ["onions", "garlic", "est", "ex", "veniam", "fugiat", "dolor"]
+    }, {
+        "index": 1,
+        "name": "menu02",
+        "category": "Hauptspeise",
+        "nationality": "Indisch",
+        "points": 2,
+        "ingredients": ["onions", "garlic", "est", "ex", "veniam", "fugiat", "dolor"]
+    }, {
+        "index": 2,
+        "name": "Kaffee",
+        "category": "Getränk",
+        "nationality": "-",
+        "points": 1,
+        "ingredients": ["Wasser", "Kaffee"]
+    }]
+}

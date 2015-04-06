@@ -102,6 +102,47 @@ body {
 .content-intro {
 	max-width: 720px
 }
+.content-body h3 {
+	margin-top: 0;
+}
+
+.menu {	
+	margin: $spacing 0;
+}
+.menu-card {
+	width: 100%;
+	margin-bottom: $spacing*2;
+}
+.menu-cookbook {
+	width: 50%;
+	padding-right: $spacing;
+	box-sizing: border-box;
+}
+.menu-choices {
+	width: 50%;
+	padding-left: $spacing;
+	box-sizing: border-box;
+}
+
+.content-table {
+	width: 100%;
+	td, th {
+		padding: $spacing/2;
+		box-sizing: border-box;
+	}
+	th {
+		text-align: left;
+	}
+	th {
+	text-align: left;
+	background: $color-02;
+	}
+	tr {
+		&:nth-child(odd) {
+			background: hsla(169, 31.6%, 44.7%, 0.1);
+		}
+	}
+}
 
 // Media Queries (from min to max)
 @media (min-width: $breakpoint-min) { }

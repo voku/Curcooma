@@ -1,9 +1,149 @@
 <!-- Web Components stuff -->
-	<template>
-		<div class="content-intro">
-		    <!--<h2>Speisenkarte erstellen</h2>-->
-		    <p><strong>Speisenkarte erstellen.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat magni ea, quisquam dolorem. Et laudantium veniam veritatis, facilis reiciendis iure accusamus? Obcaecati quisquam dolor inventore eveniet aliquid.</p>
-		</div>
-		<div class="content-body bv-cf">
-		</div>
-	</template>
+<template>
+<div class="content-intro">
+    <!--<h2>Speisenkarte erstellen</h2>-->
+    <p><strong>Speisenkarte erstellen.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat magni ea, quisquam dolorem. Et laudantium veniam veritatis, facilis reiciendis iure accusamus? Obcaecati quisquam dolor inventore eveniet aliquid.</p>
+</div>
+<div class="content-body bv-cf">
+    <div class="menu bv-cf">
+    <div class="menu-card">
+    <h3>Meine Speisekarte:</h3>
+            <table cellpadding="0" cellspacing="0" class="content-table">
+                <tr>
+                    <th>Nummer</th>
+                    <th>Name</th>
+                    <th>Kategorie</th>
+                    <th>Küche</th>
+                    <th>Preis</th>
+                </tr>
+
+                <template repeat={{menu in mealData}}>
+									<tr>
+                    <td>{{mealData.index}}</td>
+                    <td>{{mealData.name}}</td>
+                    <td>{{mealData.category}}</td>
+                    <td>{{mealData.nationality}}</td>
+                    <td>{{mealData.price}}&nbsp;€</td>
+                </tr>
+                </template>
+                <tr>
+                    <td>01</td>
+                    <td>Suppe</td>
+                    <td>Vorspeise</td>
+                    <td>Indisch</td>
+                    <td>5,60&nbsp;€</td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>COla</td>
+                    <td>Getränke</td>
+                    <td>Deutsch</td>
+                    <td>2,50&nbsp;€</td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>Braten</td>
+                    <td>Hauptspeise</td>
+                    <td>Griechisch</td>
+                    <td>15,60&nbsp;€</td>
+                </tr>
+                <tr>
+                    <td>04</td>
+                    <td>Eis</td>
+                    <td>Nachtisch</td>
+                    <td>Indisch</td>
+                    <td>2,50&nbsp;€</td>
+                </tr>
+            </table>
+            </div>
+        <div class="menu-cookbook bv-float-left">            
+            <h3>Mein Kochbuch</h3>
+            <table cellpadding="0" cellspacing="0" class="content-table">
+                <tr>
+                    <th>Name</th>
+                    <th>Kategorie</th>
+                    <th>Küche</th>
+                    <th>Preis</th>
+                </tr>
+
+                <template repeat={{menu in mealData}}>
+									<tr>
+                    <td>{{mealData.name}}</td>
+                    <td>{{mealData.category}}</td>
+                    <td>{{mealData.nationality}}</td>
+                    <td>{{mealData.price}} €</td>
+                </tr>
+                </template>
+                <tr>
+                    <td>Suppe</td>
+                    <td>Vorspeise</td>
+                    <td>Indisch</td>
+                    <td>5,60&nbsp;€</td>
+                </tr>
+                <tr>
+                    <td>COla</td>
+                    <td>Getränke</td>
+                    <td>Deutsch</td>
+                    <td>2,50&nbsp;€</td>
+                </tr>
+                <tr>
+                    <td>Braten</td>
+                    <td>Hauptspeise</td>
+                    <td>Griechisch</td>
+                    <td>15,60&nbsp;€</td>
+                </tr>
+                <tr>
+                    <td>Eis</td>
+                    <td>Nachtisch</td>
+                    <td>Indisch</td>
+                    <td>2,50&nbsp;€</td>
+                </tr>
+            </table>
+        </div>
+        <div class="menu-choices bv-float-right">
+            <form>
+                <label class="as-headline">Neue Gerichte entdecken: </label>
+                <select>
+                		<option>alle</option>
+                    <option>Indien</option>
+                    <option>Italien</option>
+                    <option>Asien</option>
+                    <option>Deutschland</option>
+                    <option>Spanien</option>
+                    <option>Premium</option>
+                </select>
+            </form>
+            <table cellpadding="0" cellspacing="0" class="content-table">
+                <tr>
+                    <th>Name</th>
+                    <th>Kategorie</th>
+                    <th>Zutaten</th>
+                    <th>Preis</th>
+                    <th>Erwerben</th>
+                </tr>
+                <tr>
+                    <td>Suppe</td>
+                    <td>Vorspeise</td>
+                    <td>Zwiebeln, Reis, Lamm, Curcooma, Kartoffeln, Reis, Lamm, Curcooma, Kartoffeln</td>
+                    <td>300&nbsp;€</td>
+                    <td><input type="checkbox" /></td>
+                </tr>
+                <tr>
+                    <td>COla</td>
+                    <td>Getränke</td>
+                    <td>Keine</td>
+                    <td>100&nbsp;€</td>
+                    <td><input type="checkbox" /></td>
+                </tr>
+                <tr>
+                    <td>Braten</td>
+                    <td>Hauptspeise</td>
+                    <td>Lorem, ipsum, dolor, sit, amet</td>
+                    <td>100&nbsp;€</td>
+                    <td><input type="checkbox" /></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</template>

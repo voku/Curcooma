@@ -547,4 +547,17 @@ button {
   padding: 0;
   margin: 0;
 }
+
+/* line 44, ../scss/_base.scss */
+td, th {
+  vertical-align: top;
+}
+
+/* line 47, ../scss/_base.scss */
+.as-headline {
+  margin-bottom: 1em;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.17em;
+}
 /*# sourceMappingURL=ie.css.map */

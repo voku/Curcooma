@@ -548,6 +548,19 @@ button {
   margin: 0;
 }
 
+/* line 44, ../scss/_base.scss */
+td, th {
+  vertical-align: top;
+}
+
+/* line 47, ../scss/_base.scss */
+.as-headline {
+  margin-bottom: 1em;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.17em;
+}
+
 /**
 * Player Section
 *
@@ -1090,6 +1103,65 @@ button {
 /* line 102, ../scss/sections/_main.scss */
 .content-intro {
   max-width: 720px;
+}
+
+/* line 105, ../scss/sections/_main.scss */
+.content-body h3 {
+  margin-top: 0;
+}
+
+/* line 109, ../scss/sections/_main.scss */
+.menu {
+  margin: 20px 0;
+}
+
+/* line 112, ../scss/sections/_main.scss */
+.menu-card {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+/* line 116, ../scss/sections/_main.scss */
+.menu-cookbook {
+  width: 50%;
+  padding-right: 20px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* line 121, ../scss/sections/_main.scss */
+.menu-choices {
+  width: 50%;
+  padding-left: 20px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* line 127, ../scss/sections/_main.scss */
+.content-table {
+  width: 100%;
+}
+/* line 129, ../scss/sections/_main.scss */
+.content-table td, .content-table th {
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/* line 133, ../scss/sections/_main.scss */
+.content-table th {
+  text-align: left;
+}
+/* line 136, ../scss/sections/_main.scss */
+.content-table th {
+  text-align: left;
+  background: #c3ff68;
+}
+/* line 141, ../scss/sections/_main.scss */
+.content-table tr:nth-child(odd) {
+  background: rgba(78, 150, 137, 0.1);
 }
 
 /**

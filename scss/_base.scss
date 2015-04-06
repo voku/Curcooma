@@ -41,6 +41,16 @@ button {
 	padding: 0;
 	margin: 0;
 }
+td, th {
+	vertical-align: top;
+}
+.as-headline {
+	margin-bottom: 1em;
+	display: inline-block;
+	font-weight: bold;
+	font-size: 1.17em;
+}
+
 
 // Media Queries (from min to max)
 @media (min-width: $breakpoint-min) { }
