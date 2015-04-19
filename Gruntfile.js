@@ -39,7 +39,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     meta: {
-      banner: '<%= pkg.name %> by <%= pkg.author %> (<%= grunt.template.today("yyyy-mm-dd, HH:MM") %>)',
+      banner: '<%= pkg.name %> by <%= pkg.author %>)',
       bannerJS:
       '/*\n' +
       ' * <%= meta.banner %>\n' +
@@ -50,14 +50,40 @@ module.exports = function(grunt) {
       build: ["js-min/*", "css/*", "css-min/*"]
     },
 
-    
+    penthouse: {
+      dist : {
+        outfile : 'css/critical-path.css',
+        css : 'css/app.css',
+        url : '<%= pkg.url %>',
+        width : 320,
+        height : 640
+      }
+    },
 
-    compass: {
+    /*
+     compass: {
+     dist: {
+     options: {
+     config: 'config.rb',
+     sourcemap: true
+     }
+     }
+     },
+     */
+
+    sass: {
       dist: {
         options: {
-          config: 'config.rb',
-          sourcemap: true
-        }
+          loadPath: ['vendor/bower/normalize-scss'],
+          sourceMap: true
+        },
+        files: [{
+          expand: true,
+          cwd: 'scss/',
+          src: ['*.scss'],
+          dest: 'css/',
+          ext: '.css'
+        }]
       }
     },
 
@@ -79,7 +105,7 @@ module.exports = function(grunt) {
         src: [
           'fonts/style.css'
         ],
-        dest: 'scss/_fonts.scss'
+        dest: 'scss/extra/_fonts.scss'
       }
     },
 
@@ -164,13 +190,19 @@ module.exports = function(grunt) {
 
       sass: {
         files: ['scss/**/*.scss'],
-        tasks: ['compass:dist', 'autoprefixer', 'csswring:minify'],
+        tasks: ['sass:dist', 'autoprefixer', 'csswring:minify'],
         options: {
           livereload: true,
           spawn : false       // for grunt-contrib-watch v0.5.0+, "nospawn: true" for lower versions.
         }
       }
 
+    },
+
+    serve: {
+      options: {
+        port: 9000
+      }
     }
 
   });
@@ -184,11 +216,12 @@ module.exports = function(grunt) {
   grunt.registerTask('csswring' ['csswring:minify']);
   grunt.registerTask('image-min', ['imagemin:dynamic']);
   grunt.registerTask('test', ['dalek']);
+  grunt.registerTask('server', ['serve']);
 
   grunt.registerTask(
       'build',
       'Build this website ... yeaahhh!',
-      [ 'clean:build', 'concat:js', 'uglify:js', 'concat:cssFonts', 'compass:dist', 'autoprefixer', 'csswring:minify']
+      [ 'clean:build', 'concat:js', 'uglify:js', 'concat:cssFonts', 'sass:dist', 'autoprefixer', 'csswring:minify']
   );
 
 };

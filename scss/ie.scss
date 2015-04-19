@@ -3,10 +3,10 @@
 @import "../vendor/bower/normalize-scss/normalize";
 
 // Global Settings
-@import "app_settings";
+@import "extra/_app_settings";
 
 // Helper
-@import "helper";
+@import "extra/_helper";
 
 // no bootstrap
-@import "base";
+@import "extra/_base";

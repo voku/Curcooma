@@ -3,18 +3,20 @@
 @import "../vendor/bower/normalize-scss/normalize";
 
 // Global Settings
-@import "app_settings";
+@import "extra/app_settings";
 
 // Helper
-@import "helper";
+@import "extra/helper";
 
 // Base Styles
-@import "base";
+@import "extra/base";
+
+@import "extra/fonts";
 
 // Modules
 @import "modules/player-section";
-@import "modules/_navigation";
-@import "modules/_content-navi";
+@import "modules/navigation";
+@import "modules/content-navi";
 
 // Sections
 @import "sections/header";
