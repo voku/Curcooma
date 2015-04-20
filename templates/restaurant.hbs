@@ -1,0 +1,23 @@
+<script type="text/x-handlebars" data-template-name="restaurant">
+
+  <h1 class="content-headline" id="contentHeadline">Mein Restaurant verwalten</h1>
+  <nav class="content-nav" id="contentNav">
+    <!--ul>li*3>button>{content01}-->
+    <ul>
+      <li class="active"><a href="#/restaurant/speisekarte" role="button">Speisekarte zusammenstellen</a></li>
+      <li><a href="#/restaurant/ausbau" role="button">Innenausbau planen</a></li>
+      <li><a href="#/restaurant/geschaeftsbedingungen" role="button">Geschäftsbedingungen festlegen</a></li>
+      <li><a href="#/restaurant/geldgeschaefte" role="button">Geldgeschäfte erledigen</a></li>
+    </ul>
+  </nav>
+  <div class="content-container">
+    <app-router>
+      <app-route path="/restaurant/speisekarte" import="/components/speisekarte.html" template></app-route>
+      <app-route path="/restaurant/ausbau" import="/components/ausbau.html" template></app-route>
+      <app-route path="/restaurant/geschaeftsbedingungen" import="/components/geschaeftsbedingungen.html"
+                 template></app-route>
+      <app-route path="/restaurant/geldgeschaefte" import="/components/geldgeschaefte.html" template></app-route>
+    </app-router>
+  </div>
+
+</script>

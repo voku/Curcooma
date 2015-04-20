@@ -3,30 +3,32 @@
  *
  * @desc Scripts to run the frotend
  * @author [@Freizeitler]
- * @dependency jQuery, ...
+ * @dependency ember.js
  */
-$(document).ready(function() {
-    var opener = $('.navi-opener'),
-        target = $('.navigation');
-    opener.on('click', function() {
-        if (!target.hasClass('open')) {
-            target.addClass('open');
-        } else {
-            target.removeClass('open');
-        }
-    });
-    $(document).mouseup(function(e) {
-        var container = $('.sidebar');
-        if (!container.is(e.target) && container.has(e.target).length === 0) {
-            target.removeClass('open');
-        }
-    });
+
+// first things first: let's instantiate our app
+window.App = Ember.Application.create({
+  LOG_TRANSITIONS: true
 });
-/*$(document).ready(function() {
- 		var clickTarget = $('.content-nav li');
- 		clickTarget.on('click', function() {
- 			clickTarget.removeClass('active');
- 			$(this).addClass('active');
- 		});
- });*/
+
+// TODO: move this code into ember.js
+$(document).ready(function () {
+  var opener = $('.navi-opener'),
+      target = $('.navigation');
+  opener.on('click', function () {
+    if (!target.hasClass('open')) {
+      target.addClass('open');
+    } else {
+      target.removeClass('open');
+    }
+  });
+
+  $(document).mouseup(function (e) {
+    var container = $('.sidebar');
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      target.removeClass('open');
+    }
+  });
+});
+
 //# sourceMappingURL=app.pkgd.js.map

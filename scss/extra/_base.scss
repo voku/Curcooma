@@ -50,7 +50,9 @@ td, th {
 	font-weight: bold;
 	font-size: 1.17em;
 }
-
+[data-template-name] {
+	display: block;
+}
 
 // Media Queries (from min to max)
 @media (min-width: $breakpoint-min) { }

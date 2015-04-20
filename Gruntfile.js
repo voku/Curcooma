@@ -60,16 +60,20 @@ module.exports = function(grunt) {
       }
     },
 
-    /*
-     compass: {
-     dist: {
-     options: {
-     config: 'config.rb',
-     sourcemap: true
-     }
-     }
-     },
-     */
+    emberTemplates: {
+      compile: {
+        options: {
+          templateName: function(name) {
+            return name.substring(name.lastIndexOf('/')+1);
+          },
+          templateCompilerPath: 'vendor/bower/ember/ember-template-compiler.js',
+          handlebarsPath: 'vendor/bower/handlebars/handlebars.js'
+        },
+        files: {
+          "js/templates.js": "templates/**/*.hbs"
+        }
+      }
+    },
 
     sass: {
       dist: {
@@ -165,9 +169,16 @@ module.exports = function(grunt) {
 
     watch: {
 
-
       html: {
         files: ['*.html'],
+        options: {
+          livereload: true
+        }
+      },
+
+      handlebars: {
+        files: ['*.hbs'],
+        tasks: ['concat:js', 'emberTemplates:compile', 'uglify:js'],
         options: {
           livereload: true
         }
@@ -221,7 +232,7 @@ module.exports = function(grunt) {
   grunt.registerTask(
       'build',
       'Build this website ... yeaahhh!',
-      [ 'clean:build', 'concat:js', 'uglify:js', 'concat:cssFonts', 'sass:dist', 'autoprefixer', 'csswring:minify']
+      [ 'clean:build', 'concat:js', 'emberTemplates:compile', 'uglify:js', 'concat:cssFonts', 'sass:dist', 'autoprefixer', 'csswring:minify']
   );
 
 };

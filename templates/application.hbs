@@ -1,0 +1,150 @@
+<script type="text/x-handlebars" data-template-name="application">
+
+  <svg display="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <symbol id="icon-cog" viewBox="0 0 1024 1024">
+        <title>cog</title>
+        <path class="path1"
+              d="M933.79 610.25c-53.726-93.054-21.416-212.304 72.152-266.488l-100.626-174.292c-28.75 16.854-62.176 26.518-97.846 26.518-107.536 0-194.708-87.746-194.708-195.99h-201.258c0.266 33.41-8.074 67.282-25.958 98.252-53.724 93.056-173.156 124.702-266.862 70.758l-100.624 174.292c28.97 16.472 54.050 40.588 71.886 71.478 53.638 92.908 21.512 211.92-71.708 266.224l100.626 174.292c28.65-16.696 61.916-26.254 97.4-26.254 107.196 0 194.144 87.192 194.7 194.958h201.254c-0.086-33.074 8.272-66.57 25.966-97.218 53.636-92.906 172.776-124.594 266.414-71.012l100.626-174.29c-28.78-16.466-53.692-40.498-71.434-71.228zM512 719.332c-114.508 0-207.336-92.824-207.336-207.334 0-114.508 92.826-207.334 207.336-207.334 114.508 0 207.332 92.826 207.332 207.334-0.002 114.51-92.824 207.334-207.332 207.334z"></path>
+        /
+      </symbol>
+      <symbol id="icon-spoon-knife" viewBox="0 0 1024 1024">
+        <title>spoon-knife</title>
+        <path class="path1"
+              d="M224 0c-106.040 0-192 100.288-192 224 0 105.924 63.022 194.666 147.706 217.998l-31.788 518.124c-2.154 35.132 24.882 63.878 60.082 63.878h32c35.2 0 62.236-28.746 60.082-63.878l-31.788-518.124c84.684-23.332 147.706-112.074 147.706-217.998 0-123.712-85.96-224-192-224zM869.334 0l-53.334 320h-40l-26.666-320h-26.668l-26.666 320h-40l-53.334-320h-26.666v416c0 17.672 14.326 32 32 32h83.338l-31.42 512.122c-2.154 35.132 24.882 63.878 60.082 63.878h32c35.2 0 62.236-28.746 60.082-63.878l-31.42-512.122h83.338c17.674 0 32-14.328 32-32v-416h-26.666z"></path>
+      </symbol>
+      <symbol id="icon-coin-euro" viewBox="0 0 1024 1024">
+        <title>coin-euro</title>
+        <path class="path1"
+              d="M480 64c-265.096 0-480 214.904-480 480s214.904 480 480 480c265.098 0 480-214.902 480-480s-214.902-480-480-480zM480 928c-212.078 0-384-171.922-384-384s171.922-384 384-384c212.076 0 384 171.922 384 384s-171.924 384-384 384z"></path>
+        <path class="path2"
+              d="M670.824 644.34c-15.27-8.884-34.862-3.708-43.75 11.57-17.256 29.662-49.088 48.090-83.074 48.090h-128c-41.716 0-77.286-26.754-90.496-64h154.496c17.672 0 32-14.326 32-32s-14.328-32-32-32h-160v-64h160c17.672 0 32-14.328 32-32s-14.328-32-32-32h-154.496c13.21-37.246 48.78-64 90.496-64h128c33.986 0 65.818 18.426 83.074 48.090 8.888 15.276 28.478 20.456 43.752 11.568 15.276-8.888 20.456-28.476 11.568-43.752-28.672-49.288-81.702-79.906-138.394-79.906h-128c-77.268 0-141.914 55.056-156.78 128h-35.22c-17.672 0-32 14.328-32 32s14.328 32 32 32h32v64h-32c-17.672 0-32 14.326-32 32s14.328 32 32 32h35.22c14.866 72.944 79.512 128 156.78 128h128c56.692 0 109.72-30.62 138.394-79.91 8.888-15.276 3.708-34.864-11.57-43.75z"></path>
+      </symbol>
+      <symbol id="icon-circle-right" viewBox="0 0 1024 1024">
+        <title>circle-right</title>
+        <path class="path1"
+              d="M512 0c-282.77 0-512 229.23-512 512s229.23 512 512 512 512-229.23 512-512-229.23-512-512-512zM512 928c-229.75 0-416-186.25-416-416s186.25-416 416-416 416 186.25 416 416-186.25 416-416 416z"></path>
+        <path class="path2"
+              d="M354.744 706.744l90.512 90.512 285.254-285.256-285.256-285.254-90.508 90.508 194.744 194.746z"></path>
+      </symbol>
+      <symbol id="icon-bell" viewBox="0 0 1024 1024">
+        <title>bell</title>
+        <path class="path1"
+              d="M1025.5 800c0-288-256-224-256-448 0-18.56-1.788-34.42-5.048-47.928-16.83-113.018-92.156-203.72-189.772-231.36 0.866-3.948 1.32-8.032 1.32-12.21 0-33.278-28.8-60.502-64-60.502s-64 27.224-64 60.5c0 4.18 0.456 8.264 1.32 12.21-109.47 30.998-190.914 141.298-193.254 273.442-0.040 1.92-0.066 3.864-0.066 5.846 0 224.002-256 160.002-256 448.002 0 76.226 170.59 139.996 398.97 156.080 21.524 40.404 64.056 67.92 113.030 67.92s91.508-27.516 113.030-67.92c228.38-16.084 398.97-79.854 398.97-156.080 0-0.228-0.026-0.456-0.028-0.682l1.528 0.682zM826.246 854.096c-54.23 14.47-118.158 24.876-186.768 30.648-5.704-65.418-60.582-116.744-127.478-116.744s-121.774 51.326-127.478 116.744c-68.608-5.772-132.538-16.178-186.768-30.648-74.63-19.914-110.31-42.19-123.368-54.096 13.058-11.906 48.738-34.182 123.368-54.096 86.772-23.152 198.372-35.904 314.246-35.904s227.474 12.752 314.246 35.904c74.63 19.914 110.31 42.19 123.368 54.096-13.058 11.906-48.738 34.182-123.368 54.096z"></path>
+      </symbol>
+    </defs>
+  </svg>
+  <header class="header" role="banner">
+    <h1>Curcooma!</h1>
+    <section class="player-section bv-cf">
+      <figure class="player-pic">
+        <img src="" alt="" width="70" height="70"/>
+      </figure>
+      <table class="player-info">
+        <tr>
+          <td>Name:</td>
+          <td class="player-name"></td>
+        </tr>
+        <tr>
+          <td>Stufe:</td>
+          <td><span class="player-level"></span></td>
+        </tr>
+      </table>
+      <div class="meta-navi">
+        <button class="button-alert"><span class="alert-count">2</span>
+          <svg class="icon icon-bell">
+            <use xlink:href="#icon-bell"></use>
+          </svg>
+        </button>
+        <button class="button-settings">
+          <svg class="icon icon-cog">
+            <use xlink:href="#icon-cog"></use>
+          </svg>
+        </button>
+      </div>
+    </section>
+    <div class="restaurant-info bv-cf">
+      <div class="restaurant-info-box">
+        <p>Restaurant</p>
+
+        <h2 class="restaurant-name restaurant-info-hl"></h2>
+      </div>
+      <div class="fork-spoon-divider fork bv-float-left">
+        <svg class="icon icon-spoon-knife">
+          <use xlink:href="#icon-spoon-knife"></use>
+        </svg>
+      </div>
+      <div class="restaurant-info-box">
+        <p>Guthaben</p>
+        <strong><span class="restaurant-money"></span> &euro;</strong>
+      </div>
+      <div class="fork-spoon-divider bv-float-left">
+        <svg class="icon icon-spoon-knife">
+          <use xlink:href="#icon-spoon-knife"></use>
+        </svg>
+      </div>
+      <div class="restaurant-info-box">
+        <p>Plätze</p>
+        <strong class="restaurant-seats"></strong>
+      </div>
+    </div>
+  </header>
+  <section class="sidebar">
+    <div class="navi-wrapper">
+      <nav class="navigation open" role="navigation">
+        <div class="local-time-container">
+          <p>Hallo <strong class="player-name"></strong>,</p>
+
+          <p>es ist <strong class="local-time">12:12</strong> <strong>Uhr</strong> am <strong class="local-date">12.12.2015</strong>.
+            <br/>Die Entwicklung deines Restaurants ist insgesamt <strong class="restaurant-progress">positiv</strong>.
+          </p>
+        </div>
+        <h3>Was möchtest du tun?</h3>
+        <ul>
+          <li>
+            {{#link-to 'dashboard' title="Die Statistik lügt nicht"}}
+              <span>Meine Entwicklung ansehen</span>
+            {{/link-to}}
+          </li>
+          <li>
+            {{#link-to 'restaurant' title="Stelle eine Speisekarte zusammen, kümmer dich um die Inneneinrichtung oder verwalte dein Kapital"}}
+              <span>Mein Restaurant verwalten</span>
+            {{/link-to}}
+          </li>
+          <li>
+            {{#link-to 'personal' title="Du brauchst das beste Personal damit dein Restaurant läuft"}}
+              <span>Mein Personal verwalten</span>
+            {{/link-to}}
+          </li>
+          <li>
+            {{#link-to 'grossmarkt' title="Kaufe Waren für deine Speisekarte und entdecke manchmal ungewöhnliche Dinge auf dem Großmarkt"}}
+              <span>Auf den Großmarkt gehen</span>
+            {{/link-to}}
+          </li>
+          <li>
+            {{#link-to 'marketing' title="Entwickel knackige Marketing-Strategien für dein Restaurant"}}
+              <span>Werbung machen</span>
+            {{/link-to}}
+          </li>
+          <li>
+            {{#link-to 'goodbye' title="Mach mal Feierabend und komm morgen wieder"}}
+              <span>Mein Spiel verlassen</span>
+            {{/link-to}}
+          </li>
+        </ul>
+      </nav>
+      <button class="navi-opener open">
+        <svg class="icon icon-circle-right">
+          <use xlink:href="#icon-circle-right"></use>
+        </svg>
+      </button>
+    </div>
+  </section>
+  <main class="main bv-cf" role="main">
+    <section class="content">
+      {{outlet}}
+    </section>
+    <footer class="footer" role="contentinfo"></footer>
+  </main>
+
+</script>

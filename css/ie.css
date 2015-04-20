@@ -415,4 +415,7 @@ td, th {
   display: inline-block;
   font-weight: bold;
   font-size: 1.17em; }
+
+[data-template-name] {
+  display: block; }
 /*# sourceMappingURL=ie.css.map */
